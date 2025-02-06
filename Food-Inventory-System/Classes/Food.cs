@@ -10,13 +10,13 @@ namespace Food_Inventory_System.Classes
     {
         private string foodID;
         private string foodName;
-        private string quantity;
+        private int quantity;
         private Category category;
         private DateTime expiryDate;
         private StorageLocation storageLocation;
         private Status status;
 
-        public Food(string foodID, string foodName, string quantity, Category category, DateTime expiryDate, StorageLocation storageLocation, Status status)
+        public Food(string foodID, string foodName, int quantity, Category category, DateTime expiryDate, StorageLocation storageLocation, Status status)
         {
             this.foodID = foodID;
             this.foodName = foodName;
@@ -39,11 +39,7 @@ namespace Food_Inventory_System.Classes
             set { foodName = value; }
         }
 
-        public string Quantity
-        {
-            get { return quantity; }
-            set { quantity = value; }
-        }
+      
 
         public Category Category
         {

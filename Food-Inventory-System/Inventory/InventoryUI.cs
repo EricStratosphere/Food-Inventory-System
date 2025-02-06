@@ -14,10 +14,15 @@ namespace Food_Inventory_System.Inventory
 {
     public partial class InventoryUI : UserControl
     {
+        private ManageDatabase db;
+        private List<Food> foods;
         public InventoryUI()
         {
+            this.db = new ManageDatabase();
+            this.foods = new List<Food>();
             InitializeComponent();
-            RefreshTable(null);
+            this.foods = db.GetAllFoods();
+            RefreshTable(foods);
         }
 
         private void InventoryUI_Load(object sender, EventArgs e)
@@ -54,7 +59,7 @@ namespace Food_Inventory_System.Inventory
             foodTableView.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             foodTableView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             foodTableView.RowTemplate.Height = 40;
-            foodTableView.Columns["foodID"].Visible = false;
+            foodTableView.Columns["FoodID"].Visible = false;
 
             foodTableView.Columns[0].Width = 30;
 
@@ -69,13 +74,13 @@ namespace Food_Inventory_System.Inventory
 
 
             // Set up Column Header
-            foodTableView.Columns["UserId"].HeaderText = "User ID";
-            foodTableView.Columns["foodName"].HeaderText = "Food Name";
-            foodTableView.Columns["quantity"].HeaderText = "Quantity";
-            foodTableView.Columns["category"].HeaderText = "Category";
-            foodTableView.Columns["expiryDate"].HeaderText = "Expiry Data";
-            foodTableView.Columns["storageLocation"].HeaderText = "Storage Location";
-            foodTableView.Columns["status"].HeaderText = "Status";
+           
+            foodTableView.Columns["Name"].HeaderText = "Food Name";
+            foodTableView.Columns["Quantity"].HeaderText = "Quantity";
+            foodTableView.Columns["Category"].HeaderText = "Category";
+            foodTableView.Columns["ExpiryDate"].HeaderText = "Expiry Data";
+            foodTableView.Columns["StorageLocation"].HeaderText = "Storage Location";
+            foodTableView.Columns["Status"].HeaderText = "Status";
         }
 
         private void foodTableView_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
