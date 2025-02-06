@@ -1,11 +1,22 @@
 # **Save and Savor**
 
 ## **Introduction**
-**Save and Savor** is a personal food inventory system designed to help users efficiently manage their food supplies while minimizing waste. With features that allow users to add, update, and remove food items, the system also sends timely notifications for items nearing expiration, ensuring that food is consumed before it spoils.
+**Save and Savor** is a personal food inventory system designed to help users efficiently manage their food supplies while minimizing waste. With features that allow users to add, update, and remove food items, the system also sends timely notifications for items nearing expiration, ensuring that food is consumed beforea it spoils.
 
 Developed as part of a hackathon competition at **Visayas State University**, Save and Savor aligns with **Sustainable Development Goal 2 (Zero Hunger)** by promoting food sustainability and reducing waste. By providing a clear overview of available food items, the system empowers users to make informed decisions, ultimately contributing to a more sustainable and waste-free lifestyle.
 
-**Table of Contents**
+## **📑 Table of Contents**  
+
+- [📦 Features](#features)  
+- [⚙️ Installation](#installation)  
+- [📌 Usage](#usage)  
+- [🔧 Configuration](#configuration)  
+- [🚀 Technologies Used](#technologies-used)  
+- [👨‍💻 Developer Credits](#developer-credits)  
+- [🤝 Contributing](#contributing)  
+- [📩 Contact](#contact)  
+
+---
 
 
 ## **Features**  
