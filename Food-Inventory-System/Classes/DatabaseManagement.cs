@@ -105,7 +105,7 @@ namespace Food_Inventory_System.Classes
                         {
                             while (reader.Read())
                             {
-                                Food.Add(new Food(
+                               Food.Add(new Food(
                                 (string)reader["FoodID"],
                                 (string)reader["FoodName"],
                                 (string)reader["Quantity"],
@@ -129,7 +129,27 @@ namespace Food_Inventory_System.Classes
                 }
             }
             return Food;
-
         }
+
+        public void DeleteFoodItem(string FoodId)
+        {
+            using (MySqlConnection conn = new MySqlConnection(con))
+            {
+                conn.Open();
+                string query = "DELETE FROM FoodItems WHERE FoodID = " + FoodId;
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@FoodID", FoodId);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                        Console.WriteLine("Item deleted successfully.");
+                    else
+                        Console.WriteLine("No item found with that ID.");
+                }
+            }
+        }
+
     }
 }
