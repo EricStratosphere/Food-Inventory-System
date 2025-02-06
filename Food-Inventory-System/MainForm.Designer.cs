@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.leftPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.exportButton = new Guna.UI2.WinForms.Guna2Button();
+            this.tipsButton = new Guna.UI2.WinForms.Guna2Button();
             this.inventoryButton = new Guna.UI2.WinForms.Guna2Button();
             this.dashboardButton = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.leftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -48,7 +48,7 @@
             // leftPanel
             // 
             this.leftPanel.BackColor = System.Drawing.Color.White;
-            this.leftPanel.Controls.Add(this.exportButton);
+            this.leftPanel.Controls.Add(this.tipsButton);
             this.leftPanel.Controls.Add(this.inventoryButton);
             this.leftPanel.Controls.Add(this.dashboardButton);
             this.leftPanel.Controls.Add(this.label1);
@@ -60,28 +60,29 @@
             this.leftPanel.Size = new System.Drawing.Size(238, 1033);
             this.leftPanel.TabIndex = 0;
             // 
-            // exportButton
+            // tipsButton
             // 
-            this.exportButton.CheckedState.BorderColor = System.Drawing.Color.Aqua;
-            this.exportButton.CheckedState.Parent = this.exportButton;
-            this.exportButton.CustomBorderThickness = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.exportButton.CustomImages.Parent = this.exportButton;
-            this.exportButton.FillColor = System.Drawing.Color.White;
-            this.exportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exportButton.ForeColor = System.Drawing.Color.Black;
-            this.exportButton.HoverState.FillColor = System.Drawing.Color.PaleTurquoise;
-            this.exportButton.HoverState.Parent = this.exportButton;
-            this.exportButton.Image = ((System.Drawing.Image)(resources.GetObject("exportButton.Image")));
-            this.exportButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.exportButton.ImageOffset = new System.Drawing.Point(20, 0);
-            this.exportButton.Location = new System.Drawing.Point(0, 331);
-            this.exportButton.Name = "exportButton";
-            this.exportButton.ShadowDecoration.Parent = this.exportButton;
-            this.exportButton.Size = new System.Drawing.Size(238, 65);
-            this.exportButton.TabIndex = 5;
-            this.exportButton.Text = "Export";
-            this.exportButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.exportButton.TextOffset = new System.Drawing.Point(30, 0);
+            this.tipsButton.CheckedState.BorderColor = System.Drawing.Color.Aqua;
+            this.tipsButton.CheckedState.Parent = this.tipsButton;
+            this.tipsButton.CustomBorderThickness = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.tipsButton.CustomImages.Parent = this.tipsButton;
+            this.tipsButton.FillColor = System.Drawing.Color.White;
+            this.tipsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tipsButton.ForeColor = System.Drawing.Color.Black;
+            this.tipsButton.HoverState.FillColor = System.Drawing.Color.PaleTurquoise;
+            this.tipsButton.HoverState.Parent = this.tipsButton;
+            this.tipsButton.Image = ((System.Drawing.Image)(resources.GetObject("tipsButton.Image")));
+            this.tipsButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tipsButton.ImageOffset = new System.Drawing.Point(20, 0);
+            this.tipsButton.Location = new System.Drawing.Point(0, 331);
+            this.tipsButton.Name = "tipsButton";
+            this.tipsButton.ShadowDecoration.Parent = this.tipsButton;
+            this.tipsButton.Size = new System.Drawing.Size(238, 65);
+            this.tipsButton.TabIndex = 5;
+            this.tipsButton.Text = "Tips";
+            this.tipsButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tipsButton.TextOffset = new System.Drawing.Point(30, 0);
+            this.tipsButton.Click += new System.EventHandler(this.tipsButton_Click);
             // 
             // inventoryButton
             // 
@@ -151,28 +152,13 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // guna2Panel2
+            // mainPanel
             // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.White;
-            this.guna2Panel2.Controls.Add(this.label2);
-            this.guna2Panel2.Controls.Add(this.guna2ControlBox2);
-            this.guna2Panel2.Controls.Add(this.guna2ControlBox1);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.Location = new System.Drawing.Point(238, 0);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(1664, 56);
-            this.guna2Panel2.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(528, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(213, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Food Inventory System";
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.mainPanel.Location = new System.Drawing.Point(238, 56);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1664, 977);
+            this.mainPanel.TabIndex = 2;
             // 
             // guna2ControlBox2
             // 
@@ -188,6 +174,29 @@
             this.guna2ControlBox2.Size = new System.Drawing.Size(44, 39);
             this.guna2ControlBox2.TabIndex = 1;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(528, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(213, 25);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Food Inventory System";
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.White;
+            this.guna2Panel2.Controls.Add(this.label2);
+            this.guna2Panel2.Controls.Add(this.guna2ControlBox2);
+            this.guna2Panel2.Controls.Add(this.guna2ControlBox1);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel2.Location = new System.Drawing.Point(238, 0);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
+            this.guna2Panel2.Size = new System.Drawing.Size(1664, 56);
+            this.guna2Panel2.TabIndex = 1;
+            // 
             // guna2ControlBox1
             // 
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -200,14 +209,6 @@
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(44, 39);
             this.guna2ControlBox1.TabIndex = 0;
-            // 
-            // mainPanel
-            // 
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.mainPanel.Location = new System.Drawing.Point(238, 56);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1664, 977);
-            this.mainPanel.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -232,16 +233,16 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel leftPanel;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button dashboardButton;
         private Guna.UI2.WinForms.Guna2Button inventoryButton;
-        private Guna.UI2.WinForms.Guna2Button exportButton;
+        private Guna.UI2.WinForms.Guna2Button tipsButton;
         private System.Windows.Forms.Panel mainPanel;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }
 

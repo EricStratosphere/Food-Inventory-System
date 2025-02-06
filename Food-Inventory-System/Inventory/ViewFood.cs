@@ -24,12 +24,12 @@ namespace Food_Inventory_System.Inventory
         {
             Food food = foods[index];
 
-            label8.Text = food.FoodName;
-            label9.Text = food.Quantity.ToString();
-            label10.Text = food.Category.ToString();
-            label11.Text = food.ExpiryDate.ToString();
-            label12.Text = food.StorageLocation.ToString();
-            label13.Text = food.Status.ToString();
+            foodNameVal.Text = food.FoodName;
+            quantityVal.Text = food.Quantity.ToString();
+            categoryVal.Text = food.Category.ToString();
+            expiryVal.Text = food.ExpiryDate.ToString();
+            storageLocVal.Text = food.StorageLocation.ToString();
+            foodStatusVal.Text = food.Status.ToString();
 
 
         }

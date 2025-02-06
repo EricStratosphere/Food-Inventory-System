@@ -160,5 +160,46 @@ namespace Food_Inventory_System.Classes
             }
         }
 
+        public List<Food> GetAllFoodsByExpDesc()
+        {
+            Foods.Clear();
+            using (MySqlConnection connection = new MySqlConnection(con))
+            {
+                connection.Open();
+                try
+                {
+                    using (MySqlCommand command = new MySqlCommand("SELECT * FROM application.food ORDER BY ExpiryDate DESC", connection))
+                    {
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Foods.Add(new Food(
+                                (string)reader["FoodID"],
+                                (string)reader["FoodName"],
+                                (int)reader["Quantity"],
+                                (Category)Enum.Parse(typeof(Category), reader["Category"].ToString()),
+                                (DateTime)reader["ExpiryDate"],
+                                (StorageLocation)Enum.Parse(typeof(StorageLocation), reader["StorageLocation"].ToString()),
+                                (Status)Enum.Parse(typeof(Status), reader["Status"].ToString())
+                            ));
+                            }
+                        }
+                    }
+                    return Foods;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There was an error while retrieving users: " + ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+            return Foods;
+
+        }
+
     }
 }

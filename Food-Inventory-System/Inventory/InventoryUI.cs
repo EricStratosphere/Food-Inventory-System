@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Food_Inventory_System.Classes;
+using Guna.UI2.WinForms;
 using Microsoft.VisualBasic.ApplicationServices;
 using Mysqlx.Crud;
 
@@ -26,6 +27,12 @@ namespace Food_Inventory_System.Inventory
             InitializeComponent();
             this.foods = db.GetAllFoods();
             RefreshTable(foods);
+            categoryList.Items.Clear();
+            categoryList.Items.Add("All");
+            foreach (var category in Enum.GetValues(typeof(Category)))
+            {
+                categoryList.Items.Add(category.ToString());
+            }
 
         }
 
@@ -77,7 +84,6 @@ namespace Food_Inventory_System.Inventory
             foodTableView.EditingControlShowing += new DataGridViewEditingControlShowingEventHandler(foodTableView_EditingControlShowing);
 
 
-            // Set up Column Header
            
             foodTableView.Columns["FoodName"].HeaderText = "Name";
             foodTableView.Columns["Quantity"].HeaderText = "Quantity";
@@ -85,6 +91,14 @@ namespace Food_Inventory_System.Inventory
             foodTableView.Columns["ExpiryDate"].HeaderText = "Expiration";
             foodTableView.Columns["StorageLocation"].HeaderText = "Storage";
             foodTableView.Columns["Status"].HeaderText = "Status";
+
+            foodTableView.Columns["FoodName"].DisplayIndex = 0; // First column
+            foodTableView.Columns["Quantity"].DisplayIndex = 1;
+            foodTableView.Columns["Category"].DisplayIndex = 2;
+            foodTableView.Columns["ExpiryDate"].DisplayIndex = 3;
+            foodTableView.Columns["StorageLocation"].DisplayIndex = 4;
+            foodTableView.Columns["Status"].DisplayIndex = 5;
+
         }
 
         private void foodTableView_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
@@ -110,11 +124,6 @@ namespace Food_Inventory_System.Inventory
                     update.SetInformation(foods, i);
                     update.Owner = form;
                     update.Show();
-                    /* UpdateForm update = new UpdateForm();
-                     SetFormLocation(update);
-                     update.SetInformation(users, i);
-                     update.Owner = form;
-                     update.Show();*/
                 }
                 else if (cb.SelectedItem.ToString() == "View")
                 {
@@ -123,11 +132,6 @@ namespace Food_Inventory_System.Inventory
                     viewFood.SetInformation(foods, i);
                     viewFood.Owner = form;
                     viewFood.Show();
-                    /* ViewForm viewForm = new ViewForm();
-                     SetFormLocation(viewForm);
-                     viewForm.SetInformation(users, i);
-                     viewForm.Owner = form;
-                     viewForm.Show();*/
                 }
                 else if (cb.SelectedItem.ToString() == "Delete")
                 {
@@ -145,19 +149,6 @@ namespace Food_Inventory_System.Inventory
                     {
                         MessageBox.Show("Deletion was cancelled", "Deletion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    /*DialogResult result = MessageBox.Show("Do you want to delete " + users[i].FirstName + " " + users[i].LastName + "" +
-                        "'s Information?\nThis action is irreversible.", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (result == DialogResult.Yes)
-                    {
-                        MessageBox.Show(users[i].FirstName + " " + users[i].LastName + "'s information was sucesfully deleted.", "Sucessfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        db.DeleteUser(users[i].UserId);
-                        RefreshTable(users);
-                        refreshButtton_Click(sender, e);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Deletion was cancelled", "Deletion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }*/
                 }
                
             }
@@ -173,7 +164,7 @@ namespace Food_Inventory_System.Inventory
 
       
 
-        private void guna2Button1_Click_1(object sender, EventArgs e)
+        private void addFoodBtn2_Click_1(object sender, EventArgs e)
         {
             AddFood addFood = new AddFood(this);
             SetFormLocation(addFood);
@@ -184,9 +175,110 @@ namespace Food_Inventory_System.Inventory
 
         public void guna2PictureBox1_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text = "";
+            searchBar.Text = "";
             this.foods = db.GetAllFoods();
             RefreshTable(foods);
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            categoryList.Text = "All";
+            sortListType.Text = "All";
+            String name = searchBar.Text;
+            if (string.IsNullOrWhiteSpace(name) || name == "Search...")
+            {
+                RefreshTable(foods);
+                return;
+            }
+            List<Food> u2 = foods.Select(u => u).ToList();
+            foods.Clear();
+            foreach (Food u in u2)
+            {
+                if (u.FoodName.ToLower().Contains(name.ToLower()))
+                    foods.Add(u);
+            }
+            if (foods.Count == 0)
+            {
+                foods = db.GetAllFoods();
+            }
+            RefreshTable(foods);
+        }
+
+        private void categoryList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            searchBar.Text = "Search...";
+            sortListType.Text = "All";
+            String categoryType = categoryList.SelectedItem.ToString();
+            if (categoryType == "All")
+            {
+                foods = db.GetAllFoods();
+                RefreshTable(foods);
+            }
+            else
+            {
+                foods = db.GetAllFoods();
+                List<Food> u2 = foods.Select(u => u).ToList();
+
+                foods.Clear();
+                foreach (Food u in u2)
+                {
+                    if (u.Category.ToString().Equals(categoryType))
+                        foods.Add(u);
+                }
+                if (foods.Count == 0)
+                {
+                    MessageBox.Show("No " + categoryType + " was Found!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    foods = db.GetAllFoods();
+                    RefreshTable(foods);
+                }
+                else
+                    RefreshTable(foods);
+
+            }
+        }
+
+        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            searchBar.Text = "Search...";
+            categoryList.Text = "All";
+            String sortList = sortListType.SelectedItem.ToString();
+            if (sortList == "Expiration Date")
+            {
+                foods = foods.OrderBy(u => u.ExpiryDate).ToList();
+            }
+            else
+            {
+                foods = foods.OrderBy(u => u.Quantity).ToList();
+            }
+            RefreshTable(foods);
+        }
+
+        private void printButton_Click(object sender, EventArgs e)
+        {
+            DGVPrinterHelper.DGVPrinter printer = new DGVPrinterHelper.DGVPrinter();
+            printer.FooterFont = new Font("Arial", 8, FontStyle.Bold);
+            printer.TitleFont = new Font("Century Gothic", 16, FontStyle.Bold);
+            printer.SubTitleFont = new Font("Century Gothic", 10, FontStyle.Regular);
+            printer.Title = "Food Inventory List\n";
+            printer.SubTitle = string.Format("Date: {0}\n", DateTime.Now.Date.ToString("MM/dd/yyyy"));
+            printer.SubTitle += string.Format("Time: {0}\n\n", DateTime.Now.ToString("HH:mm:ss"));
+
+            printer.printDocument.DefaultPageSettings.Margins = new System.Drawing.Printing.Margins(50, 50, 50, 50);
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.Footer = "Mabolo Dormitory System";
+            printer.FooterSpacing = 15;
+            try
+            {
+                printer.PrintPreviewDataGridView(foodTableView);
+                printer.PrintDataGridView(foodTableView);
+            }
+            catch
+            {
+                MessageBox.Show("An error occured while printing.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

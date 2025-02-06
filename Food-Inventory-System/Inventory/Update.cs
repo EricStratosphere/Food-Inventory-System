@@ -20,21 +20,23 @@ namespace Food_Inventory_System.Inventory
         {
             this.db = new ManageDatabase();
             InitializeComponent();
+            expiryDatePicker.MinDate = DateTime.Today;
+
             foreach (var category in Enum.GetValues(typeof(Category)))
             {
-                guna2ComboBox1.Items.Add(category.ToString());
+                categoryName.Items.Add(category.ToString());
             }
 
-            guna2ComboBox2.Items.Clear();
+            storageLoc.Items.Clear();
             foreach (var locc in Enum.GetValues(typeof(StorageLocation)))
             {
-                guna2ComboBox2.Items.Add(locc.ToString());
+                storageLoc.Items.Add(locc.ToString());
             }
 
-            guna2ComboBox3.Items.Clear();
+            foodStat.Items.Clear();
             foreach (var st in Enum.GetValues(typeof(Status)))
             {
-                guna2ComboBox3.Items.Add(st.ToString());
+                foodStat.Items.Add(st.ToString());
             }
 
             this.foodTab = foodTab;
@@ -44,23 +46,23 @@ namespace Food_Inventory_System.Inventory
         {
             food = foods[index];
             Food fd = foods[index];
-            guna2TextBox1.Text = fd.FoodName;
-            guna2TextBox2.Text = fd.Quantity.ToString();
-            guna2ComboBox1.Text = fd.Category.ToString();
-            guna2TextBox3.Text = fd.ExpiryDate.ToString();
-            guna2ComboBox2.Text = fd.StorageLocation.ToString();
-            guna2ComboBox3.Text = fd.Status.ToString();
+            foodName.Text = fd.FoodName;
+            quantityName.Text = fd.Quantity.ToString();
+            categoryName.Text = fd.Category.ToString();
+            expiryDatePicker.Text = fd.ExpiryDate.ToString();
+            storageLoc.Text = fd.StorageLocation.ToString();
+            foodStat.Text = fd.Status.ToString();
 
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void updateBtn_Click(object sender, EventArgs e)
         {
-            if (db.UpdateFoodItem(food.FoodID, guna2TextBox1.Text,
-            int.Parse(guna2TextBox2.Text),
-            (Category)Enum.Parse(typeof(Category), guna2ComboBox1.SelectedItem.ToString()),
-            DateTime.Parse(guna2TextBox3.Text),
-            (StorageLocation)Enum.Parse(typeof(StorageLocation), guna2ComboBox2.SelectedItem.ToString()),
-            (Status)Enum.Parse(typeof(Status), guna2ComboBox3.SelectedItem.ToString())
+            if (db.UpdateFoodItem(food.FoodID, foodName.Text,
+            int.Parse(quantityName.Text),
+            (Category)Enum.Parse(typeof(Category), categoryName.SelectedItem.ToString()),
+            DateTime.Parse(expiryDatePicker.Text),
+            (StorageLocation)Enum.Parse(typeof(StorageLocation), storageLoc.SelectedItem.ToString()),
+            (Status)Enum.Parse(typeof(Status), foodStat.SelectedItem.ToString())
             ))
             {
                 MessageBox.Show("Food Item Updated Successfully");
@@ -74,5 +76,6 @@ namespace Food_Inventory_System.Inventory
                 this.Dispose();
             }
         }
+
     }
 }

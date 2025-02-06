@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Food_Inventory_System.Dashboard;
 using Food_Inventory_System.Inventory;
+using Food_Inventory_System.Tips;
 
 namespace Food_Inventory_System
 {
@@ -48,6 +49,23 @@ namespace Food_Inventory_System
                 btn.Checked = false;
             }
             inventoryButton.Checked = true;
+        }
+
+        private void tipsButton_Click(object sender, EventArgs e)
+        {
+            TipsUI tips = new TipsUI();
+            tips.TopLevel = false;
+            mainPanel.Controls.Clear();
+
+            mainPanel.Controls.Add(tips);
+            tips.Show();
+
+            foreach (Guna2Button btn in leftPanel.Controls.OfType<Guna2Button>())
+            {
+                btn.Checked = false;
+            }
+            tipsButton.Checked = true;
+
         }
     }
 }

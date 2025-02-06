@@ -22,22 +22,24 @@ namespace Food_Inventory_System.Inventory
             this.foodTab = foodTab;
             InitializeComponent();
             this.db = new ManageDatabase();
-            guna2ComboBox1.Items.Clear(); 
+            datePickerVal.MinDate = DateTime.Today;
+
+            categoryVal.Items.Clear(); 
             foreach (var category in Enum.GetValues(typeof(Category)))
             {
-                guna2ComboBox1.Items.Add(category.ToString());
+                categoryVal.Items.Add(category.ToString());
             }
 
-            guna2ComboBox2.Items.Clear();
+            storageLocVal.Items.Clear();
             foreach(var locc in Enum.GetValues(typeof(StorageLocation)))
             {
-                guna2ComboBox2.Items.Add(locc.ToString());
+                storageLocVal.Items.Add(locc.ToString());
             }
 
-            guna2ComboBox3.Items.Clear();
+            foodStatusVal.Items.Clear();
             foreach (var st in Enum.GetValues(typeof(Status)))
             {
-                guna2ComboBox3.Items.Add(st.ToString());
+                foodStatusVal.Items.Add(st.ToString());
             }
 
         }
@@ -47,18 +49,18 @@ namespace Food_Inventory_System.Inventory
 
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void addFoodBtn_Click(object sender, EventArgs e)
         {
             GenerateID generate = new GenerateID();
             string foodID = generate.GenID();
             Food newFood = new Food(
             foodID,  
-            guna2TextBox1.Text,  
-            int.Parse(guna2TextBox2.Text), 
-            (Category)Enum.Parse(typeof(Category), guna2ComboBox1.SelectedItem.ToString()),  
-            DateTime.Parse(guna2TextBox3.Text),  
-            (StorageLocation)Enum.Parse(typeof(StorageLocation), guna2ComboBox2.SelectedItem.ToString()),  
-            (Status)Enum.Parse(typeof(Status), guna2ComboBox3.SelectedItem.ToString())  
+            foodNameVal.Text,  
+            int.Parse(quantityVal.Text), 
+            (Category)Enum.Parse(typeof(Category), categoryVal.SelectedItem.ToString()),  
+            DateTime.Parse(datePickerVal.Text),  
+            (StorageLocation)Enum.Parse(typeof(StorageLocation), storageLocVal.SelectedItem.ToString()),  
+            (Status)Enum.Parse(typeof(Status), foodStatusVal.SelectedItem.ToString())  
             );
 
             string message = "Add " + newFood.FoodName + "'s Information?";
