@@ -16,9 +16,11 @@ namespace Food_Inventory_System.Inventory
     {
         private ManageDatabase db;
         private List<Food> foods;
+        private Form form;
         public InventoryUI()
         {
             this.db = new ManageDatabase();
+            this.form = form;
             this.foods = new List<Food>();
             InitializeComponent();
             this.foods = db.GetAllFoods();
@@ -78,6 +80,7 @@ namespace Food_Inventory_System.Inventory
             // Set up Column Header
            
             foodTableView.Columns["FoodName"].HeaderText = "Name";
+            foodTableView.Columns["Quantity"].HeaderText = "Quantity";
             foodTableView.Columns["Category"].HeaderText = "Category";
             foodTableView.Columns["ExpiryDate"].HeaderText = "Expiration";
             foodTableView.Columns["StorageLocation"].HeaderText = "Storage";
@@ -110,11 +113,16 @@ namespace Food_Inventory_System.Inventory
                 }
                 else if (cb.SelectedItem.ToString() == "View")
                 {
-                   /* ViewForm viewForm = new ViewForm();
-                    SetFormLocation(viewForm);
-                    viewForm.SetInformation(users, i);
-                    viewForm.Owner = form;
-                    viewForm.Show();*/
+                    ViewFood viewFood = new ViewFood();
+                    SetFormLocation(viewFood);
+                    viewFood.SetInformation(foods, i);
+                    viewFood.Owner = form;
+                    viewFood.Show();
+                    /* ViewForm viewForm = new ViewForm();
+                     SetFormLocation(viewForm);
+                     viewForm.SetInformation(users, i);
+                     viewForm.Owner = form;
+                     viewForm.Show();*/
                 }
                 else if (cb.SelectedItem.ToString() == "Delete")
                 {
@@ -134,6 +142,14 @@ namespace Food_Inventory_System.Inventory
                 }
                
             }
+
+        }
+        private void SetFormLocation(Form form)
+        {
+            form.StartPosition = FormStartPosition.Manual;
+            int x = Screen.PrimaryScreen.Bounds.Width - form.Width - Convert.ToInt32(10 * 96 / 2.54);
+            int y = ((Screen.PrimaryScreen.Bounds.Height - form.Height) / 2);
+            form.Location = new Point(x, y);
         }
     }
 }
