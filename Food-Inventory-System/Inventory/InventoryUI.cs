@@ -14,10 +14,15 @@ namespace Food_Inventory_System.Inventory
 {
     public partial class InventoryUI : UserControl
     {
+        private ManageDatabase db;
+        private List<Food> foods;
         public InventoryUI()
         {
+            this.db = new ManageDatabase();
+            this.foods = new List<Food>();
             InitializeComponent();
-            RefreshTable(null);
+            this.foods = db.GetAllFoods();
+            RefreshTable(foods);
         }
 
         private void InventoryUI_Load(object sender, EventArgs e)
