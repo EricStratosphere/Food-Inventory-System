@@ -7,7 +7,8 @@ This application aligns with **Sustainable Development Goal 2 (Zero Hunger)** an
 
 ## **2. Features**
 - Add, update, edit, and delete food items from inventory  
-- Track expiration dates and receive notifications  
+- Track expiration dates and receive notifications
+- Get an accurate overview of personal food inventory
 - Simple and user-friendly interface  
 - Helps reduce food waste by reminding users of expiring items  
 
@@ -48,7 +49,11 @@ This application aligns with **Sustainable Development Goal 2 (Zero Hunger)** an
 - Github
 
 ## **7. Contributing** *(Optional)*
+- John Rhuel C. Laurente
+- Jamir Oasis M. Andrade
+- Yñigo Niño C. Ramas
+- Norman John N. Bandibas
 If you would like to contribute, feel free to submit a pull request or report issues.  
 
-## **9. Contact** *(Optional)*
+## **8. Contact** *(Optional)*
 For inquiries or support, contact [Your Email or Socials].
