@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -256,6 +257,69 @@ namespace Food_Inventory_System.Classes
             }
         }
 
+        public List<Food> FilterByQuantityASC()
+        {
+            using (MySqlConnection connection = new MySqlConnection(con))
+            {
+                connection.Open();
+                try
+                {
+                    Food.Clear();
+                    using (MySqlCommand command = new MySqlCommand("SELECT * FROM application.food ORDER BY Quantity ASC", connection))
+                    {
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Food.Add(new Food((string)reader["FoodID"], (string)reader["Name"], (int)reader["Quantity"], (Category)reader["Category"], (DateTime)reader["ExpiryDate"], (StorageLocation)reader["StorageLocation"], (Status)reader["Status"]));
+                            }
+                        }
+                        return Food;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There was an error while filtering by:" + ex.Message);
+                    return null;
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+        public List<Food> FilterByQuantityDESC()
+        {
+            using (MySqlConnection connection = new MySqlConnection(con))
+            {
+                connection.Open();
+                try
+                {
+                    Food.Clear();
+                    using (MySqlCommand command = new MySqlCommand("SELECT * FROM application.food ORDER BY Quantity DESC", connection))
+                    {
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Food.Add(new Food((string)reader["FoodID"], (string)reader["Name"], (int)reader["Quantity"], (Category)reader["Category"], (DateTime)reader["ExpiryDate"], (StorageLocation)reader["StorageLocation"], (Status)reader["Status"]));
+                            }
+                        }
+                        return Food;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There was an error while filtering by:" + ex.Message);
+                    return null;
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+        }
     }
 }
 
