@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Food_Inventory_System.Classes.User">
+    <Position X="1.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAACgDAAAgAwAAAAEAAACAAAAAgAAAAA=</HashCode>
+      <FileName>Classes\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Food_Inventory_System.Classes.Food">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQGACAEAgAgAAAAAAAAAAAAQAAAAESAAAAIgAAACAA=</HashCode>
+      <FileName>Classes\Food.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="category" />
+      <Field Name="storageLocation" />
+      <Field Name="status" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="Food_Inventory_System.Classes.StorageLocation" Collapsed="true">
+    <Position X="6.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQACAgAAAAAAAAAAAAAAICAACAAAwAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\StorageLocation.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Food_Inventory_System.Classes.Status" Collapsed="true">
+    <Position X="6.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAgAAAIAAA=</HashCode>
+      <FileName>Classes\Status.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Food_Inventory_System.Classes.Category" Collapsed="true">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAwBAAAEAAAgAAAAAEAAAAAAAAACAAAAAAAIAAIA=</HashCode>
+      <FileName>Classes\Category.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
