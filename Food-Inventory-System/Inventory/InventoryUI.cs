@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Food_Inventory_System.Classes;
 using Microsoft.VisualBasic.ApplicationServices;
+using Mysqlx.Crud;
 
 namespace Food_Inventory_System.Inventory
 {
@@ -104,11 +105,16 @@ namespace Food_Inventory_System.Inventory
                 int i = foodTableView.CurrentRow.Index;
                 if (cb.SelectedItem.ToString() == "Update")
                 {
-                   /* UpdateForm update = new UpdateForm();
+                    Update update = new Update(this);
                     SetFormLocation(update);
-                    update.SetInformation(users, i);
+                    update.SetInformation(foods, i);
                     update.Owner = form;
-                    update.Show();*/
+                    update.Show();
+                    /* UpdateForm update = new UpdateForm();
+                     SetFormLocation(update);
+                     update.SetInformation(users, i);
+                     update.Owner = form;
+                     update.Show();*/
                 }
                 else if (cb.SelectedItem.ToString() == "View")
                 {
@@ -125,6 +131,20 @@ namespace Food_Inventory_System.Inventory
                 }
                 else if (cb.SelectedItem.ToString() == "Delete")
                 {
+                    DialogResult result = MessageBox.Show("Do you want to delete " + foods[i].FoodName + "" +
+                        "'s Information?\nThis action is irreversible.", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        MessageBox.Show(foods[i].FoodName + "'s information was sucesfully deleted.", "Sucessfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        db.DeleteFoodItem(foods[i].FoodID);
+                        foods = db.GetAllFoods();
+                        RefreshTable(foods);
+                        guna2PictureBox1_Click(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Deletion was cancelled", "Deletion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                     /*DialogResult result = MessageBox.Show("Do you want to delete " + users[i].FirstName + " " + users[i].LastName + "" +
                         "'s Information?\nThis action is irreversible.", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (result == DialogResult.Yes)

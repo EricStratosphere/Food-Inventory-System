@@ -58,7 +58,8 @@
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(122, 47);
             this.guna2Button1.TabIndex = 49;
-            this.guna2Button1.Text = "Add";
+            this.guna2Button1.Text = "Update";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2ComboBox3
             // 
@@ -265,11 +266,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(185, 33);
+            this.label1.Location = new System.Drawing.Point(200, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 25);
+            this.label1.Size = new System.Drawing.Size(265, 25);
             this.label1.TabIndex = 35;
-            this.label1.Text = "Add Food\'s Information";
+            this.label1.Text = "Update Food\'s Information";
             // 
             // Update
             // 

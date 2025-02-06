@@ -152,7 +152,7 @@ namespace Food_Inventory_System.Classes
             }
         }
 
-        public bool UpdateFoodItem(Food food, string foodName, int quantity, Category category, DateTime expiryDate, StorageLocation storageLocation, Status status)
+        public bool UpdateFoodItem(String foodID, string foodName, int quantity, Category category, DateTime expiryDate, StorageLocation storageLocation, Status status)
         {
 
             using (MySqlConnection conn = new MySqlConnection(con))
@@ -170,7 +170,7 @@ namespace Food_Inventory_System.Classes
                         cmd.Parameters.AddWithValue("@ExpiryDate", expiryDate);
                         cmd.Parameters.AddWithValue("@StorageLocation", storageLocation);
                         cmd.Parameters.AddWithValue("@Status", status);
-                        cmd.Parameters.AddWithValue("@FoodID", food.FoodID);
+                        cmd.Parameters.AddWithValue("@FoodID", foodID);
 
                         int rowsAffected = cmd.ExecuteNonQuery();
                         if (rowsAffected > 0)

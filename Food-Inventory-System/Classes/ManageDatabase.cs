@@ -101,5 +101,64 @@ namespace Food_Inventory_System.Classes
             return false;
         }
 
+        public bool UpdateFoodItem(String foodID, string foodName, int quantity, Category category, DateTime expiryDate, StorageLocation storageLocation, Status status)
+        {
+
+            using (MySqlConnection conn = new MySqlConnection(con))
+            {
+                conn.Open();
+                try
+                {
+                    string query = "UPDATE application.food SET Name = @Name, Quantity = @Quantity, Category = @Category, ExpiryDate = @ExpiryDate, StorageLocation = @StorageLocation, FoodStatus = @Status WHERE FoodID = @FoodID";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Name", foodName);
+                        cmd.Parameters.AddWithValue("@Quantity", quantity);
+                        cmd.Parameters.AddWithValue("@Category", category.ToString());
+                        cmd.Parameters.AddWithValue("@ExpiryDate", expiryDate);
+                        cmd.Parameters.AddWithValue("@StorageLocation", storageLocation.ToString());
+                        cmd.Parameters.AddWithValue("@Status", status.ToString());
+                        cmd.Parameters.AddWithValue("@FoodID", foodID);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                            return true;
+                        else
+                            return false;
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("There was an error while updating: " + e);
+                    return false;
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        public void DeleteFoodItem(string FoodId)
+        {
+            using (MySqlConnection conn = new MySqlConnection(con))
+            {
+                conn.Open();
+                string query = "DELETE FROM application.food WHERE FoodID = @FoodID";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@FoodID", FoodId);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                        Console.WriteLine("Item deleted successfully.");
+                    else
+                        Console.WriteLine("No item found with that ID.");
+                }
+            }
+        }
+
     }
 }
