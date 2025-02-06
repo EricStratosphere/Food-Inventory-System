@@ -16,13 +16,17 @@ namespace Food_Inventory_System.Inventory
     {
         private ManageDatabase db;
         private List<Food> foods;
+        private Form form;
         public InventoryUI()
         {
             this.db = new ManageDatabase();
+            this.form = form;
             this.foods = new List<Food>();
             InitializeComponent();
             this.foods = db.GetAllFoods();
+            MessageBox.Show("Foods: " + foods.Count);
             RefreshTable(foods);
+
         }
 
         private void InventoryUI_Load(object sender, EventArgs e)
@@ -42,7 +46,7 @@ namespace Food_Inventory_System.Inventory
                 foodTableView.Columns.Remove("Action");
             }
             foodTableView.DataSource = null;
-            List<Food> u2 = null;
+            List<Food> u2 = foods;
             if (n == 60)
                 u2 = foods.GetRange(0, foods.Count);
             else
@@ -60,8 +64,8 @@ namespace Food_Inventory_System.Inventory
             foodTableView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             foodTableView.RowTemplate.Height = 40;
             foodTableView.Columns["FoodID"].Visible = false;
+            foodTableView.Columns[0].Visible = false;
 
-            foodTableView.Columns[0].Width = 30;
 
             // Add Action Column
             DataGridViewComboBoxColumn comboBoxColumn = new DataGridViewComboBoxColumn();
@@ -75,11 +79,11 @@ namespace Food_Inventory_System.Inventory
 
             // Set up Column Header
            
-            foodTableView.Columns["Name"].HeaderText = "Food Name";
+            foodTableView.Columns["FoodName"].HeaderText = "Name";
             foodTableView.Columns["Quantity"].HeaderText = "Quantity";
             foodTableView.Columns["Category"].HeaderText = "Category";
-            foodTableView.Columns["ExpiryDate"].HeaderText = "Expiry Data";
-            foodTableView.Columns["StorageLocation"].HeaderText = "Storage Location";
+            foodTableView.Columns["ExpiryDate"].HeaderText = "Expiration";
+            foodTableView.Columns["StorageLocation"].HeaderText = "Storage";
             foodTableView.Columns["Status"].HeaderText = "Status";
         }
 
@@ -109,11 +113,16 @@ namespace Food_Inventory_System.Inventory
                 }
                 else if (cb.SelectedItem.ToString() == "View")
                 {
-                   /* ViewForm viewForm = new ViewForm();
-                    SetFormLocation(viewForm);
-                    viewForm.SetInformation(users, i);
-                    viewForm.Owner = form;
-                    viewForm.Show();*/
+                    ViewFood viewFood = new ViewFood();
+                    SetFormLocation(viewFood);
+                    viewFood.SetInformation(foods, i);
+                    viewFood.Owner = form;
+                    viewFood.Show();
+                    /* ViewForm viewForm = new ViewForm();
+                     SetFormLocation(viewForm);
+                     viewForm.SetInformation(users, i);
+                     viewForm.Owner = form;
+                     viewForm.Show();*/
                 }
                 else if (cb.SelectedItem.ToString() == "Delete")
                 {
@@ -133,6 +142,14 @@ namespace Food_Inventory_System.Inventory
                 }
                
             }
+
+        }
+        private void SetFormLocation(Form form)
+        {
+            form.StartPosition = FormStartPosition.Manual;
+            int x = Screen.PrimaryScreen.Bounds.Width - form.Width - Convert.ToInt32(10 * 96 / 2.54);
+            int y = ((Screen.PrimaryScreen.Bounds.Height - form.Height) / 2);
+            form.Location = new Point(x, y);
         }
     }
 }
