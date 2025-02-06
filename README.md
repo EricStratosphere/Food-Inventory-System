@@ -1,23 +1,30 @@
 # **Save and Savor**
 
 ## **Introduction**
-**Save and Savor** is a personal food inventory system designed to help users efficiently manage their food supplies while minimizing waste. With features that allow users to add, update, and remove food items, the system also sends timely notifications for items nearing expiration, ensuring that food is consumed beforea it spoils.
+**Save and Savor** is a personal food inventory system designed to help users efficiently manage their food supplies while minimizing waste. With features that allow users to add, update, and remove food items, the system also sends timely notifications for items nearing expiration, ensuring that food is consumed before it spoils.
 
 Developed as part of a hackathon competition at **Visayas State University**, Save and Savor aligns with **Sustainable Development Goal 2 (Zero Hunger)** by promoting food sustainability and reducing waste. By providing a clear overview of available food items, the system empowers users to make informed decisions, ultimately contributing to a more sustainable and waste-free lifestyle.
 
 ## **📑 Table of Contents**  
 
-- [📦 Features](#features)  
-- [⚙️ Installation](#installation)  
-- [📌 Usage](#usage)  
-- [🔧 Configuration](#configuration)  
-- [🚀 Technologies Used](#technologies-used)  
-- [👨‍💻 Developer Credits](#developer-credits)  
-- [🤝 Contributing](#contributing)  
-- [📩 Contact](#contact)  
+- [Features](#features)  
+  - [Inventory Management](#-inventory-management)  
+  - [Expiration Tracking](#-expiration-tracking)  
+  - [Comprehensive Overview](#-comprehensive-overview)  
+  - [Export Inventory as CSV](#-export-inventory-as-csv)  
+  - [User-Friendly Interface](#-user-friendly-interface)  
+  - [Food Waste Reduction](#-food-waste-reduction)  
+- [Installation](#installation)  
+  - [Prerequisites](#prerequisites)  
+  - [Steps to Install](#steps-to-install)  
+- [Usage](#-usage)  
+- [Configuration](#configuration)  
+- [Technologies Used](#-technologies-used)  
+- [Developer Credits](#-developer-credits)  
+- [Contributing](#-contributing)  
+- [Contact](#-contact)  
 
 ---
-
 
 ## **Features**  
 
@@ -38,8 +45,6 @@ Designed for ease of use, the system features an intuitive and user-friendly int
 
 ### **♻️ Food Waste Reduction**  
 By actively tracking expiration dates and providing automated alerts, the system promotes responsible food consumption. This feature encourages users to utilize perishable items before expiration, leading to better meal planning, financial savings, and a more sustainable lifestyle.  
-
-
 
 ## **Installation**
 ### **Prerequisites**
@@ -92,27 +97,17 @@ The system automatically tracks expiration dates and sends **reminders** when it
    - **Plan meals accordingly** to make the best use of perishable food.  
    - **Dispose of expired items safely** to maintain food safety.  
 
-By following these steps, users can maintain an organized food inventory, reduce food waste, and optimize grocery shopping decisions.  
-  
-
 ## **Configuration**
 - [Mention any environment variables or settings that need configuration]
 
 ## 🚀 **Technologies Used**  
-
-The application is built using a combination of modern technologies to ensure efficiency, scalability, and user-friendly interaction.  
 
 - **🖥️ C#** – Used for backend development, handling business logic, data processing, and system functionalities.  
 - **🎨 Guna UI** – A powerful UI framework that enhances the visual appeal and user experience with modern and responsive interface components.  
 - **🗄️ MySQL** – A robust relational database management system (RDBMS) used for storing, managing, and retrieving food inventory data efficiently.  
 - **🔄 GitHub** – Enables version control, code collaboration, and project management, ensuring seamless teamwork and continuous development.  
 
-These technologies work together to provide a reliable, intuitive, and feature-rich food inventory management system.  
-
-
 ## 👨‍💻 **Developer Credits**  
-
-This project was developed by a dedicated team of developers committed to creating an efficient food inventory management system.  
 
 ### 👥 **Developers**  
 - **John Rhuel C. Laurente**  
@@ -120,27 +115,13 @@ This project was developed by a dedicated team of developers committed to creati
 - **Yñigo Niño C. Ramas**  
 - **Norman John N. Bandibas**  
 
-Their collective expertise in backend development, UI design, database management, and system optimization contributed to the successful development of this application.  
-
-
 ## 🤝 **Contributing**
 
-Thank you for considering contributing to this project! Your support and contributions are greatly valued. Here are some ways you can contribute:  
-
-1. **🐞 Report Bugs** – If you encounter any bugs or issues, please open an issue on GitHub to help improve the system.  
-2. **💡 Suggest Features** – Have an idea for a new feature? Open an issue and share your suggestions to enhance the project.  
-3. **🔀 Submit Pull Requests** – Fork the repository, implement your changes, and submit a pull request for review. Contributions to code optimization, UI improvements, and bug fixes are always welcome!  
-4. **💬 Provide Feedback** – Share your insights, feedback, and ideas in the project's issues section to help refine the system.  
-5. **📢 Spread the Word** – Help others discover this project by sharing it on social media or with your peers.  
-
-We appreciate your interest and support! 🚀 Feel free to contribute by submitting a pull request or reporting issues.  
-
----
+1. **🐞 Report Bugs**  
+2. **💡 Suggest Features**  
+3. **🔀 Submit Pull Requests**  
+4. **💬 Provide Feedback**  
+5. **📢 Spread the Word**  
 
 ## 📩 **Contact**
-
-For any inquiries, support, or collaboration opportunities, feel free to reach out to us at:  
-
-📧 **saveandsavor.contact@gmail.com**  
-
-
+📧 **saveandsavor.contact@gmail.com**
