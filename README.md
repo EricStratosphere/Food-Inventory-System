@@ -8,22 +8,26 @@ Developed as part of a hackathon competition at **Visayas State University**, Sa
 **Table of Contents**
 
 
-## 📌 Features  
+## **Features**  
 
-### 📦 Inventory Management  
+### **📦 Inventory Management**  
 The system offers a structured and efficient approach to managing food inventory. Users can seamlessly add, update, and delete food items while maintaining accurate records of quantity, storage location, and expiration dates. This ensures an organized and accessible inventory.  
 
-### ⏳ Expiration Tracking  
+### **⏳ Expiration Tracking**  
 To prevent food spoilage, the system automatically tracks expiration dates and categorizes food items as **Fresh**, **Expiring Soon**, or **Expired**. Users receive timely notifications when items are nearing expiration, allowing them to make informed consumption decisions and reduce waste.  
 
-### 📊 Comprehensive Overview  
+### **📊 Comprehensive Overview**  
 A well-structured overview of the inventory provides users with clear insights into their food stock. Items are categorized by **food type** and **storage location**, including refrigerators, freezers, pantries, and other designated areas, facilitating easy access and efficient inventory management.  
 
-### 🖥️ User-Friendly Interface  
+### **📂 Export Inventory as CSV**  
+Users can **export their inventory data as a CSV file**, allowing for easy record-keeping, sharing, or further analysis in spreadsheet applications such as Microsoft Excel or Google Sheets. This feature ensures flexibility in managing and reviewing food stock outside the application.  
+
+### **🖥️ User-Friendly Interface**  
 Designed for ease of use, the system features an intuitive and user-friendly interface. Whether adding new food items, updating existing ones, or monitoring expiration statuses, users can navigate the system effortlessly. The logical data structure ensures a seamless and efficient user experience.  
 
-### ♻️ Food Waste Reduction  
+### **♻️ Food Waste Reduction**  
 By actively tracking expiration dates and providing automated alerts, the system promotes responsible food consumption. This feature encourages users to utilize perishable items before expiration, leading to better meal planning, financial savings, and a more sustainable lifestyle.  
+
 
 
 ## **Installation**
