@@ -77,7 +77,7 @@ By actively tracking expiration dates and providing automated alerts, the system
 - Add these three `variable names` individually: `MYSQL_PASSWORD`, `MYSQL_SERVER`, `MYSQL_USERNAME` (follow these names strictly), and set their values to the corresponding values you entered when setting up your database.
 
   ### Install
-- Run the installation process downloaded from [this GitHub link](https://github.com/VSUrhuel/Mabolo-Dormitory-System/releases/tag/System). **You can now use the app!**
+- Run the installation process downloaded from [this GitHub link](https://github.com/VSUrhuel/Food-Inventory-System). **You can now use the app!**
 
 ## How to Open Using Visual Studio?
 ![VS](Resources/vs.png "VS")
