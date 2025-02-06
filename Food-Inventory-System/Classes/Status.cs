@@ -9,6 +9,7 @@ namespace Food_Inventory_System.Classes
     public enum Status
     {
         Fresh,
-
+        ExpiringSoon,
+        Expired
     }
 }
