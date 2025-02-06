@@ -114,6 +114,12 @@
     <Compile Include="Dashboard\DashboardUI.Designer.cs">
       <DependentUpon>DashboardUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventory\InventoryUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryUI.Designer.cs">
+      <DependentUpon>InventoryUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Dashboard\DashboardUI.resx">
       <DependentUpon>DashboardUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryUI.resx">
+      <DependentUpon>InventoryUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

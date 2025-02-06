@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Food_Inventory_System.Dashboard;
+using Food_Inventory_System.Inventory;
 
 namespace Food_Inventory_System
 {
@@ -39,6 +40,9 @@ namespace Food_Inventory_System
 
         private void inventoryButton_Click(object sender, EventArgs e)
         {
+            InventoryUI inventoryUI = new InventoryUI();
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(inventoryUI);
             foreach (Guna2Button btn in leftPanel.Controls.OfType<Guna2Button>())
             {
                 btn.Checked = false;
