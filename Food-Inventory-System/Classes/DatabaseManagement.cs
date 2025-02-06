@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -151,5 +152,42 @@ namespace Food_Inventory_System.Classes
             }
         }
 
+        public void UpdateFoodItem()
+        {
+            
+        }
+
+        public bool addFood(Food food)
+        {
+            using (MySqlConnection connection = new MySqlConnection(con))
+            {
+                connection.Open();
+                try
+                {
+                    string query = "INSERT INTO application.food(FoodID, Name, Quantity, Category, ExpiryDate, Storage Location, Status) VALUES (@FoodID, @Name, @Quantity, @Category, @ExpiryDate, @Storage Location, @Status)";
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@FoodID", food.FoodID);
+                        command.Parameters.AddWithValue("@Name", food.FoodName);
+                        command.Parameters.AddWithValue("@Quantity", food.Quantity);
+                        command.Parameters.AddWithValue("@Category", food.Category);
+                        command.Parameters.AddWithValue("@ExpiryDate", food.ExpiryDate);
+                        command.Parameters.AddWithValue("@StorageLocation", food.StorageLocation);
+                        command.Parameters.AddWithValue("@Status", food.Status);
+
+                        return true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There was an error while adding food: " + ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+            return false;
+        }
     }
 }
