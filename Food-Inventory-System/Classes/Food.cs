@@ -39,11 +39,7 @@ namespace Food_Inventory_System.Classes
             set { foodName = value; }
         }
 
-        public string Quantity
-        {
-            get { return quantity; }
-            set { quantity = value; }
-        }
+      
 
         public Category Category
         {
