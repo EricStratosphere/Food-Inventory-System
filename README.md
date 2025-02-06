@@ -14,9 +14,6 @@ Developed as part of a hackathon competition at **Visayas State University**, Sa
   - [Export Inventory as PDF](#-export-inventory-as-pdf)  
   - [User-Friendly Interface](#-user-friendly-interface)  
   - [Food Waste Reduction](#-food-waste-reduction)  
-- [Installation](#installation)  
-  - [Prerequisites](#prerequisites)  
-  - [Steps to Install](#steps-to-install)  
 - [Usage](#-usage)  
 - [Configuration](#configuration)  
 - [Technologies Used](#-technologies-used)  
@@ -45,24 +42,6 @@ Designed for ease of use, the system features an intuitive and user-friendly int
 
 ### **♻️ Food Waste Reduction**  
 By actively tracking expiration dates and providing automated alerts, the system promotes responsible food consumption. This feature encourages users to utilize perishable items before expiration, leading to better meal planning, financial savings, and a more sustainable lifestyle.  
-
-## **Installation**
-### **Prerequisites**
-
-### **Steps to Install**
-1. **Clone the repository**:
-   ```bash
-   git clone <repository-url>
-   cd <project-directory>
-   ```  
-2. **Install dependencies**:
-   ```bash
-   [installation command, e.g., npm install or pip install -r requirements.txt]
-   ```  
-3. **Run the application**:
-   ```bash
-   [command to start the app]
-   ```  
 
 ## 📌 **Usage**  
 
