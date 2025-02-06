@@ -105,7 +105,7 @@ namespace Food_Inventory_System.Inventory
                 int i = foodTableView.CurrentRow.Index;
                 if (cb.SelectedItem.ToString() == "Update")
                 {
-                    Update update = new Update();
+                    Update update = new Update(this);
                     SetFormLocation(update);
                     update.SetInformation(foods, i);
                     update.Owner = form;
@@ -131,6 +131,20 @@ namespace Food_Inventory_System.Inventory
                 }
                 else if (cb.SelectedItem.ToString() == "Delete")
                 {
+                    DialogResult result = MessageBox.Show("Do you want to delete " + foods[i].FoodName + "" +
+                        "'s Information?\nThis action is irreversible.", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        MessageBox.Show(foods[i].FoodName + "'s information was sucesfully deleted.", "Sucessfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        db.DeleteFoodItem(foods[i].FoodID);
+                        foods = db.GetAllFoods();
+                        RefreshTable(foods);
+                        guna2PictureBox1_Click(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Deletion was cancelled", "Deletion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                     /*DialogResult result = MessageBox.Show("Do you want to delete " + users[i].FirstName + " " + users[i].LastName + "" +
                         "'s Information?\nThis action is irreversible.", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (result == DialogResult.Yes)
