@@ -170,7 +170,7 @@ namespace Food_Inventory_System.Classes
                         command.Parameters.AddWithValue("@FoodID", food.FoodID);
                         command.Parameters.AddWithValue("@Name", food.FoodName);
                         command.Parameters.AddWithValue("@Quantity", food.Quantity);
-                        command.Parameters.AddWithValue("@Category", food.Category);
+                        command.Parameters.AddWithValue("@Category", food.Category.ToString());
                         command.Parameters.AddWithValue("@ExpiryDate", food.ExpiryDate);
                         command.Parameters.AddWithValue("@StorageLocation", food.StorageLocation);
                         command.Parameters.AddWithValue("@Status", food.Status);
