@@ -34,20 +34,21 @@ This application aligns with **Sustainable Development Goal 2 (Zero Hunger)** an
 ## **4. Usage**
 - Open the application and navigate to the inventory dashboard  
 - Use the interface to add new food items  
-- Edit or delete items as needed  
+- Edit or delete items as needed
+- Enter your email address  
 - Get notified about items nearing expiration  
 
 ## **5. Configuration**
 - [Mention if there are environment variables or settings to configure]  
 
 ## **6. Technologies Used**
-- [List frameworks, languages, or databases used, e.g., React, Flask, PostgreSQL]  
+- C#
+- Guna UI
+- MySQL
+- Github
 
 ## **7. Contributing** *(Optional)*
 If you would like to contribute, feel free to submit a pull request or report issues.  
-
-## **8. License** *(Optional)*
-[Specify the license, e.g., MIT, GPL]  
 
 ## **9. Contact** *(Optional)*
 For inquiries or support, contact [Your Email or Socials].
