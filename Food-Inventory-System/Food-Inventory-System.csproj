@@ -105,6 +105,7 @@
     <Compile Include="Classes\Category.cs" />
     <Compile Include="Classes\DatabaseManagement.cs" />
     <Compile Include="Classes\Food.cs" />
+    <Compile Include="Classes\ManageDatabase.cs" />
     <Compile Include="Classes\Status.cs" />
     <Compile Include="Classes\StorageLocation.cs" />
     <Compile Include="Classes\User.cs" />
