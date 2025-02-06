@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Category.cs" />
+    <Compile Include="Classes\DatabaseManagement.cs" />
+    <Compile Include="Classes\Food.cs" />
+    <Compile Include="Classes\Status.cs" />
+    <Compile Include="Classes\StorageLocation.cs" />
+    <Compile Include="Classes\User.cs" />
     <Compile Include="Dashboard\DashboardUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -93,8 +99,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
