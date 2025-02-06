@@ -105,6 +105,7 @@
     <Compile Include="Classes\Category.cs" />
     <Compile Include="Classes\DatabaseManagement.cs" />
     <Compile Include="Classes\Food.cs" />
+    <Compile Include="Classes\GenerateID.cs" />
     <Compile Include="Classes\ManageDatabase.cs" />
     <Compile Include="Classes\Status.cs" />
     <Compile Include="Classes\StorageLocation.cs" />
@@ -126,6 +127,12 @@
     </Compile>
     <Compile Include="Inventory\InventoryUI.Designer.cs">
       <DependentUpon>InventoryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\Update.Designer.cs">
+      <DependentUpon>Update.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory\ViewFood.cs">
       <SubType>Form</SubType>
@@ -149,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryUI.resx">
       <DependentUpon>InventoryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Update.resx">
+      <DependentUpon>Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\ViewFood.resx">
       <DependentUpon>ViewFood.cs</DependentUpon>
