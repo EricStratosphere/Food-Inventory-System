@@ -48,8 +48,44 @@ By actively tracking expiration dates and providing automated alerts, the system
 
 ## **Installation**
 ### **Prerequisites**
-- [List required software, e.g., Node.js, Python, or database]
-- [Any dependencies or package managers, e.g., npm, pip]
+#### MySql Server
+![MySql Server](Resources/MySql_Download.png "MySql Server")
+- You should have a **MySql community server**. If you don't have it, you can download it from the [official website](https://dev.mysql.com/downloads/mysql/). Follow the setup process and install it.
+
+#### Download Resources
+![Release Download](Resources/Reslease_Download.png "Release Download")
+- Visit [this link](https://github.com/VSUrhuel/Mabolo-Dormitory-System/releases) to download the latest release version of this app. Click the **latest** `.msi` file to download it. 
+
+![Database Download](Resources/Database_Download.png "Database Download")
+- Navigate to the `Resources` folder in this repository and download the SQL file `SystemDatabase`.
+
+### Set Up MySql
+![SQL](Resources/sql2.png "SQL")
+- Open the MySql Workbench application. Click the plus icon next to the application's text logo.
+
+![SQL](Resources/sql1.png "SQL")
+- Enter the connection name and note the `hostname` and `username`.
+
+![SQL](Resources/sql3.png "SQL")
+- Click the database you created. Go to the `server` section, click `Data Import`, select `Import from Self-Contained file`, then choose the directory where the downloaded `SystemDatabase` is located. Finally, click `Start Import`.
+
+- Congratulations! You have finished setting up MySql! Scroll down for more!
+### Set Up Environment Variables
+![Environment Variables](Resources/EnvironmentVariables.png "Environment Variables")
+- In Windows search, look for `environment variables` settings. In `system variables`, click `add`.
+
+- Add these three `variable names` individually: `MYSQL_PASSWORD`, `MYSQL_SERVER`, `MYSQL_USERNAME` (follow these names strictly), and set their values to the corresponding values you entered when setting up your database.
+
+  ### Install
+- Run the installation process downloaded from [this GitHub link](https://github.com/VSUrhuel/Mabolo-Dormitory-System/releases/tag/System). **You can now use the app!**
+
+## How to Open Using Visual Studio?
+![VS](Resources/vs.png "VS")
+- Click `code` at the top and select `Open with Visual Studio`.
+
+- To fully utilize this, download various NutGet extensions, including but not limited to `MySql`, `Xunit`, and `MySql Connector`. These can be easily downloaded in NutGet Packages.
+
+- For `GunaUI`, **DO NOT** download it from NutGet package. Manually download the `dll` file and add it to the project's references. You can download the `GunaUI.dll` from this repository.
 
 ### **Steps to Install**
 1. **Clone the repository**:
