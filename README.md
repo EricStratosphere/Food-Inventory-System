@@ -14,11 +14,11 @@ Developed as part of a hackathon competition at **Visayas State University**, Sa
   - [Export Inventory as PDF](#-export-inventory-as-pdf)  
   - [User-Friendly Interface](#-user-friendly-interface)  
   - [Food Waste Reduction](#-food-waste-reduction)  
-- [Usage](#-usage)  
-- [Configuration](#configuration)  
+- [Usage](#-usage)   
 - [Technologies Used](#-technologies-used)  
 - [Developer Credits](#-developer-credits)  
-- [Contributing](#-contributing)  
+- [Contributing](#-contributing)
+- [Acknowledgement](#-acknowledgement)
 - [Contact](#-contact)  
 
 ---
@@ -53,7 +53,7 @@ Launch the application and navigate to the **inventory dashboard**, where you ca
 ### 2️⃣ Manage Your Inventory  
 Easily **add new food items** by providing key details such as:  
    - **Item name** (e.g., "Milk," "Apples," "Chicken Breast")  
-   - **Quantity** (e.g., "2 liters," "5 pieces," "1 kg")  
+   - **Quantity** (e.g., "5 pieces")  
    - **Category** (e.g., Dairy, Fruits, Vegetables, Meat & Poultry)  
    - **Storage location** (where the item is stored)  
    - **Expiration date** (to enable tracking)  
@@ -73,9 +73,6 @@ The system automatically tracks expiration dates and sends **reminders** when it
    - **Prioritize consuming items that are nearing expiration** to minimize waste.  
    - **Plan meals accordingly** to make the best use of perishable food.  
    - **Dispose of expired items safely** to maintain food safety.  
-
-## **Configuration**
-- [Mention any environment variables or settings that need configuration]
 
 ## 🚀 **Technologies Used**  
 
@@ -103,6 +100,13 @@ Thank you for considering contributing to this project! Your support and contrib
 5. **📢 Spread the Word** – Help others discover this project by sharing it on social media or with your peers.  
 
 We appreciate your interest and support! 🚀 Feel free to contribute by submitting a pull request or reporting issues.  
+
+## 🙏 **Acknowledgement**
+We extend our heartfelt gratitude to the following individuals and organizations for their invaluable support in the development of **Save and Savor**:
+- **Computer Science Student Society** – For providing the platform and opportunity to participate in the hackathon.
+- **Mentors & Judges** – For their guidance, constructive feedback, and encouragement throughout the development process.
+- **Friends** – For their unwavering support and inspiration.
+- **Open-Source Community** – For providing resources, tools, and frameworks that made this project possible.
 
 ## 📩 **Contact**
 📧 **saveandsavor.contact@gmail.com**
