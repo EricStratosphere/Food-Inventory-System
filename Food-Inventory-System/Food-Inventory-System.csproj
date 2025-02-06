@@ -121,6 +121,12 @@
     <Compile Include="Inventory\InventoryUI.Designer.cs">
       <DependentUpon>InventoryUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventory\ViewFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\ViewFood.Designer.cs">
+      <DependentUpon>ViewFood.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryUI.resx">
       <DependentUpon>InventoryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\ViewFood.resx">
+      <DependentUpon>ViewFood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

@@ -22,7 +22,9 @@ namespace Food_Inventory_System.Inventory
             this.foods = new List<Food>();
             InitializeComponent();
             this.foods = db.GetAllFoods();
+            MessageBox.Show("Foods: " + foods.Count);
             RefreshTable(foods);
+
         }
 
         private void InventoryUI_Load(object sender, EventArgs e)
@@ -42,7 +44,7 @@ namespace Food_Inventory_System.Inventory
                 foodTableView.Columns.Remove("Action");
             }
             foodTableView.DataSource = null;
-            List<Food> u2 = null;
+            List<Food> u2 = foods;
             if (n == 60)
                 u2 = foods.GetRange(0, foods.Count);
             else
@@ -60,8 +62,8 @@ namespace Food_Inventory_System.Inventory
             foodTableView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             foodTableView.RowTemplate.Height = 40;
             foodTableView.Columns["FoodID"].Visible = false;
+            foodTableView.Columns[0].Visible = false;
 
-            foodTableView.Columns[0].Width = 30;
 
             // Add Action Column
             DataGridViewComboBoxColumn comboBoxColumn = new DataGridViewComboBoxColumn();
@@ -75,11 +77,10 @@ namespace Food_Inventory_System.Inventory
 
             // Set up Column Header
            
-            foodTableView.Columns["Name"].HeaderText = "Food Name";
-            foodTableView.Columns["Quantity"].HeaderText = "Quantity";
+            foodTableView.Columns["FoodName"].HeaderText = "Name";
             foodTableView.Columns["Category"].HeaderText = "Category";
-            foodTableView.Columns["ExpiryDate"].HeaderText = "Expiry Data";
-            foodTableView.Columns["StorageLocation"].HeaderText = "Storage Location";
+            foodTableView.Columns["ExpiryDate"].HeaderText = "Expiration";
+            foodTableView.Columns["StorageLocation"].HeaderText = "Storage";
             foodTableView.Columns["Status"].HeaderText = "Status";
         }
 
