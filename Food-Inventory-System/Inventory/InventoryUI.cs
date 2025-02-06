@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Food_Inventory_System.Classes;
 using Microsoft.VisualBasic.ApplicationServices;
+using Mysqlx.Crud;
 
 namespace Food_Inventory_System.Inventory
 {
@@ -104,11 +105,16 @@ namespace Food_Inventory_System.Inventory
                 int i = foodTableView.CurrentRow.Index;
                 if (cb.SelectedItem.ToString() == "Update")
                 {
-                   /* UpdateForm update = new UpdateForm();
+                    Update update = new Update();
                     SetFormLocation(update);
-                    update.SetInformation(users, i);
+                    update.SetInformation(foods, i);
                     update.Owner = form;
-                    update.Show();*/
+                    update.Show();
+                    /* UpdateForm update = new UpdateForm();
+                     SetFormLocation(update);
+                     update.SetInformation(users, i);
+                     update.Owner = form;
+                     update.Show();*/
                 }
                 else if (cb.SelectedItem.ToString() == "View")
                 {
