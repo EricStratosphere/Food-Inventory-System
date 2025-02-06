@@ -26,5 +26,15 @@ namespace Food_Inventory_System.Dashboard
         {
 
         }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
