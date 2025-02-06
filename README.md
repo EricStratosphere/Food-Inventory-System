@@ -1,3 +1,5 @@
+![App Logo](https://github.com/VSUrhuel/Food-Inventory-System/blob/master/475978227_1305470657377627_2969843749542933660_n.png)
+
 # **Save and Savor**
 
 ## **Introduction**
