@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -105,7 +106,7 @@ namespace Food_Inventory_System.Classes
                         {
                             while (reader.Read())
                             {
-                                Food.Add(new Food(
+                               Food.Add(new Food(
                                 (string)reader["FoodID"],
                                 (string)reader["FoodName"],
                                 (int)reader["Quantity"],
@@ -129,7 +130,64 @@ namespace Food_Inventory_System.Classes
                 }
             }
             return Food;
+        }
 
+        public void DeleteFoodItem(string FoodId)
+        {
+            using (MySqlConnection conn = new MySqlConnection(con))
+            {
+                conn.Open();
+                string query = "DELETE FROM FoodItems WHERE FoodID = " + FoodId;
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@FoodID", FoodId);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                        Console.WriteLine("Item deleted successfully.");
+                    else
+                        Console.WriteLine("No item found with that ID.");
+                }
+            }
+        }
+
+        public void UpdateFoodItem()
+        {
+            
+        }
+
+        public bool addFood(Food food)
+        {
+            using (MySqlConnection connection = new MySqlConnection(con))
+            {
+                connection.Open();
+                try
+                {
+                    string query = "INSERT INTO application.food(FoodID, Name, Quantity, Category, ExpiryDate, Storage Location, Status) VALUES (@FoodID, @Name, @Quantity, @Category, @ExpiryDate, @Storage Location, @Status)";
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@FoodID", food.FoodID);
+                        command.Parameters.AddWithValue("@Name", food.FoodName);
+                        command.Parameters.AddWithValue("@Quantity", food.Quantity);
+                        command.Parameters.AddWithValue("@Category", food.Category);
+                        command.Parameters.AddWithValue("@ExpiryDate", food.ExpiryDate);
+                        command.Parameters.AddWithValue("@StorageLocation", food.StorageLocation);
+                        command.Parameters.AddWithValue("@Status", food.Status);
+
+                        return true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There was an error while adding food: " + ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+            return false;
         }
     }
 }

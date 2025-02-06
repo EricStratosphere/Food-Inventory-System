@@ -27,6 +27,7 @@ namespace Food_Inventory_System.Classes
             this.status = status;
         }   
 
+        public int Quantity {  get { return quantity; } set { quantity = value; } }
         public string FoodID
         {
             get { return foodID; }
