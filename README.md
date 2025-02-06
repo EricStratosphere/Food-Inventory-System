@@ -61,7 +61,7 @@ By actively tracking expiration dates and providing automated alerts, the system
    [command to start the app]
    ```  
 
-## 📌 Usage  
+## 📌 **Usage**  
 
 Follow these steps to effectively manage your food inventory and reduce waste:  
 
@@ -98,7 +98,7 @@ By following these steps, users can maintain an organized food inventory, reduce
 ## **Configuration**
 - [Mention any environment variables or settings that need configuration]
 
-## 🚀 Technologies Used  
+## 🚀 **Technologies Used**  
 
 The application is built using a combination of modern technologies to ensure efficiency, scalability, and user-friendly interaction.  
 
@@ -110,7 +110,7 @@ The application is built using a combination of modern technologies to ensure ef
 These technologies work together to provide a reliable, intuitive, and feature-rich food inventory management system.  
 
 
-## 👨‍💻 Developer Credits *(Optional)*  
+## 👨‍💻 **Developer Credits **  
 
 This project was developed by a dedicated team of developers committed to creating an efficient food inventory management system.  
 
@@ -123,7 +123,7 @@ This project was developed by a dedicated team of developers committed to creati
 Their collective expertise in backend development, UI design, database management, and system optimization contributed to the successful development of this application.  
 
 
-## 🤝 Contributing 
+## 🤝 **Contributing **
 
 Thank you for considering contributing to this project! Your support and contributions are greatly valued. Here are some ways you can contribute:  
 
@@ -137,7 +137,7 @@ We appreciate your interest and support! 🚀 Feel free to contribute by submitt
 
 ---
 
-## 📩 Contact  
+## 📩 **Contact  **
 
 For any inquiries, support, or collaboration opportunities, feel free to reach out to us at:  
 
