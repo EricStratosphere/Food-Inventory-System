@@ -11,7 +11,7 @@ Developed as part of a hackathon competition at **Visayas State University**, Sa
   - [Inventory Management](#-inventory-management)  
   - [Expiration Tracking](#-expiration-tracking)  
   - [Comprehensive Overview](#-comprehensive-overview)  
-  - [Export Inventory as CSV](#-export-inventory-as-csv)  
+  - [Export Inventory as PDF](#-export-inventory-as-pdf)  
   - [User-Friendly Interface](#-user-friendly-interface)  
   - [Food Waste Reduction](#-food-waste-reduction)  
 - [Installation](#installation)  
@@ -37,8 +37,8 @@ To prevent food spoilage, the system automatically tracks expiration dates and c
 ### **📊 Comprehensive Overview**  
 A well-structured overview of the inventory provides users with clear insights into their food stock. Items are categorized by **food type** and **storage location**, including refrigerators, freezers, pantries, and other designated areas, facilitating easy access and efficient inventory management.  
 
-### **📂 Export Inventory as CSV**  
-Users can **export their inventory data as a CSV file**, allowing for easy record-keeping, sharing, or further analysis in spreadsheet applications such as Microsoft Excel or Google Sheets. This feature ensures flexibility in managing and reviewing food stock outside the application.  
+### **📄 Export Inventory as PDF**  
+Users can export their inventory data as a PDF file, allowing for easy record-keeping, sharing, or printing. This feature ensures flexibility in managing and reviewing food stock outside the application, with a clean and professional format suitable for documentation. 
 
 ### **🖥️ User-Friendly Interface**  
 Designed for ease of use, the system features an intuitive and user-friendly interface. Whether adding new food items, updating existing ones, or monitoring expiration statuses, users can navigate the system effortlessly. The logical data structure ensures a seamless and efficient user experience.  
