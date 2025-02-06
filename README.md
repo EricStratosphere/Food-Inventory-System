@@ -110,11 +110,11 @@ The application is built using a combination of modern technologies to ensure ef
 These technologies work together to provide a reliable, intuitive, and feature-rich food inventory management system.  
 
 
-## 👨‍💻 **Developer Credits **  
+## 👨‍💻 **Developer Credits**  
 
 This project was developed by a dedicated team of developers committed to creating an efficient food inventory management system.  
 
-### **👥 Developers**  
+### 👥 **Developers**  
 - **John Rhuel C. Laurente**  
 - **Jamir Oasis M. Andrade**  
 - **Yñigo Niño C. Ramas**  
@@ -123,7 +123,7 @@ This project was developed by a dedicated team of developers committed to creati
 Their collective expertise in backend development, UI design, database management, and system optimization contributed to the successful development of this application.  
 
 
-## 🤝 **Contributing **
+## 🤝 **Contributing**
 
 Thank you for considering contributing to this project! Your support and contributions are greatly valued. Here are some ways you can contribute:  
 
@@ -137,7 +137,7 @@ We appreciate your interest and support! 🚀 Feel free to contribute by submitt
 
 ---
 
-## 📩 **Contact  **
+## 📩 **Contact**
 
 For any inquiries, support, or collaboration opportunities, feel free to reach out to us at:  
 
