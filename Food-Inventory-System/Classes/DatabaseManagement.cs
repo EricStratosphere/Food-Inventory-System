@@ -137,7 +137,7 @@ namespace Food_Inventory_System.Classes
             using (MySqlConnection conn = new MySqlConnection(con))
             {
                 conn.Open();
-                string query = "DELETE FROM FoodItems WHERE FoodID = " + FoodId;
+                string query = "DELETE FROM application.food WHERE FoodID = @FoodID";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
@@ -152,9 +152,43 @@ namespace Food_Inventory_System.Classes
             }
         }
 
-        public void UpdateFoodItem()
+        public bool UpdateFoodItem(Food food, string foodName, int quantity, Category category, DateTime expiryDate, StorageLocation storageLocation, Status status)
         {
-            
+
+            using (MySqlConnection conn = new MySqlConnection(con))
+            {
+                conn.Open();
+                try
+                {
+                    string query = "UPDATE application.food SET Name = @Name, Quantity = @Quantity, Category = @Category, ExpiryDate = @ExpiryDate, StorageLocation = @StorageLocation, FoodStatus = @Status WHERE FoodID = @FoodID";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Name", foodName);
+                        cmd.Parameters.AddWithValue("@Quantity", quantity);
+                        cmd.Parameters.AddWithValue("@Category", category);
+                        cmd.Parameters.AddWithValue("@ExpiryDate", expiryDate);
+                        cmd.Parameters.AddWithValue("@StorageLocation", storageLocation);
+                        cmd.Parameters.AddWithValue("@Status", status);
+                        cmd.Parameters.AddWithValue("@FoodID", food.FoodID);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                            return true;
+                        else
+                            return false;
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("There was an error while updating: " + e);
+                    return false;
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
         }
 
         public bool addFood(Food food)
@@ -170,7 +204,7 @@ namespace Food_Inventory_System.Classes
                         command.Parameters.AddWithValue("@FoodID", food.FoodID);
                         command.Parameters.AddWithValue("@Name", food.FoodName);
                         command.Parameters.AddWithValue("@Quantity", food.Quantity);
-                        command.Parameters.AddWithValue("@Category", food.Category);
+                        command.Parameters.AddWithValue("@Category", food.Category.ToString());
                         command.Parameters.AddWithValue("@ExpiryDate", food.ExpiryDate);
                         command.Parameters.AddWithValue("@StorageLocation", food.StorageLocation);
                         command.Parameters.AddWithValue("@Status", food.Status);
