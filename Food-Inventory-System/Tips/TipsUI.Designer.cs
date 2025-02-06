@@ -75,6 +75,7 @@
             this.label29 = new System.Windows.Forms.Label();
             this.guna2PictureBox13 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label33 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -621,12 +622,23 @@
             this.label33.TabIndex = 0;
             this.label33.Text = "6";
             // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(522, 800);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(274, 25);
+            this.label35.TabIndex = 21;
+            this.label35.Text = "Rhuel | Ynigo | Jamir | Norman";
+            // 
             // TipsUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1327, 834);
+            this.Controls.Add(this.label35);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
@@ -649,6 +661,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox13)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -700,5 +713,6 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox8;
+        private System.Windows.Forms.Label label35;
     }
 }

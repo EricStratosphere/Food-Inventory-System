@@ -40,14 +40,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.logOut = new Guna.UI2.WinForms.Guna2Button();
             this.leftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // leftPanel
             // 
             this.leftPanel.BackColor = System.Drawing.Color.White;
+            this.leftPanel.Controls.Add(this.logOut);
+            this.leftPanel.Controls.Add(this.guna2PictureBox1);
             this.leftPanel.Controls.Add(this.tipsButton);
             this.leftPanel.Controls.Add(this.inventoryButton);
             this.leftPanel.Controls.Add(this.dashboardButton);
@@ -178,11 +183,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(528, 15);
+            this.label2.Location = new System.Drawing.Point(436, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(213, 25);
+            this.label2.Size = new System.Drawing.Size(371, 25);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Food Inventory System";
+            this.label2.Text = "Food Inventory System - Save and Savor";
             // 
             // guna2Panel2
             // 
@@ -210,6 +215,35 @@
             this.guna2ControlBox1.Size = new System.Drawing.Size(44, 39);
             this.guna2ControlBox1.TabIndex = 0;
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.Location = new System.Drawing.Point(56, 448);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(128, 279);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // logOut
+            // 
+            this.logOut.BorderRadius = 10;
+            this.logOut.CheckedState.Parent = this.logOut;
+            this.logOut.CustomImages.Parent = this.logOut;
+            this.logOut.FillColor = System.Drawing.Color.DarkCyan;
+            this.logOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOut.ForeColor = System.Drawing.Color.White;
+            this.logOut.HoverState.Parent = this.logOut;
+            this.logOut.Image = ((System.Drawing.Image)(resources.GetObject("logOut.Image")));
+            this.logOut.Location = new System.Drawing.Point(25, 786);
+            this.logOut.Name = "logOut";
+            this.logOut.ShadowDecoration.Parent = this.logOut;
+            this.logOut.Size = new System.Drawing.Size(203, 55);
+            this.logOut.TabIndex = 0;
+            this.logOut.Text = "Log Out";
+            this.logOut.Click += new System.EventHandler(this.logOut_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -226,6 +260,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -243,6 +278,8 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Button logOut;
     }
 }
 

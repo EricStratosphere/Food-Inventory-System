@@ -67,5 +67,10 @@ namespace Food_Inventory_System
             tipsButton.Checked = true;
 
         }
+
+        private void logOut_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("The user is logout! This is just a demo prototype.");
+        }
     }
 }
