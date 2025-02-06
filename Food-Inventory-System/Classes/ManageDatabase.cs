@@ -44,7 +44,7 @@ namespace Food_Inventory_System.Classes
                                 Foods.Add(new Food(
                                 (string)reader["FoodID"],
                                 (string)reader["Name"],
-                                (string)reader["Quantity"],
+                                (int)reader["Quantity"],
                                 (Category)Enum.Parse(typeof(Category), reader["Category"].ToString()),
                                 (DateTime)reader["ExpiryDate"],
                                 (StorageLocation)Enum.Parse(typeof(StorageLocation), reader["StorageLocation"].ToString()),
