@@ -22,8 +22,8 @@ namespace Food_Inventory_System.Classes
         public ManageDatabase()
         {
             string uid = "root";
-            string pwd = "stratosphere123";
-            con = $"server=localhost;port=3306;uid={uid};pwd={pwd}";
+            string pwd = "Laurente1234.";
+            con = $"server=127.0.0.1;port=3306;uid={uid};pwd={pwd}";
             Foods = new List<Food>();
         }
 
@@ -35,7 +35,7 @@ namespace Food_Inventory_System.Classes
                 connection.Open();
                 try
                 {
-                    using (MySqlCommand command = new MySqlCommand("SELECT * FROM system.user", connection))
+                    using (MySqlCommand command = new MySqlCommand("SELECT * FROM application.food", connection))
                     {
                         using (MySqlDataReader reader = command.ExecuteReader())
                         {
@@ -43,12 +43,12 @@ namespace Food_Inventory_System.Classes
                             {
                                 Foods.Add(new Food(
                                 (string)reader["FoodID"],
-                                (string)reader["FoodName"],
+                                (string)reader["Name"],
                                 (string)reader["Quantity"],
                                 (Category)Enum.Parse(typeof(Category), reader["Category"].ToString()),
                                 (DateTime)reader["ExpiryDate"],
                                 (StorageLocation)Enum.Parse(typeof(StorageLocation), reader["StorageLocation"].ToString()),
-                                (Status)Enum.Parse(typeof(Status), reader["Status"].ToString())
+                                (Status)Enum.Parse(typeof(Status), reader["FoodStatus"].ToString())
                             ));
                             }
                         }
