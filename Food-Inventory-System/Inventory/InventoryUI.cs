@@ -24,7 +24,6 @@ namespace Food_Inventory_System.Inventory
             this.foods = new List<Food>();
             InitializeComponent();
             this.foods = db.GetAllFoods();
-            MessageBox.Show("Foods: " + foods.Count);
             RefreshTable(foods);
 
         }
@@ -150,6 +149,24 @@ namespace Food_Inventory_System.Inventory
             int x = Screen.PrimaryScreen.Bounds.Width - form.Width - Convert.ToInt32(10 * 96 / 2.54);
             int y = ((Screen.PrimaryScreen.Bounds.Height - form.Height) / 2);
             form.Location = new Point(x, y);
+        }
+
+      
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+            AddFood addFood = new AddFood(this);
+            SetFormLocation(addFood);
+            addFood.Owner = form;
+            addFood.Show();
+
+        }
+
+        public void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            guna2TextBox1.Text = "";
+            this.foods = db.GetAllFoods();
+            RefreshTable(foods);
         }
     }
 }

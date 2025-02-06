@@ -68,5 +68,38 @@ namespace Food_Inventory_System.Classes
 
         }
 
+        public bool addFood(Food food)
+        {
+            using (MySqlConnection connection = new MySqlConnection(con))
+            {
+                connection.Open();
+                try
+                {
+                    string query = "INSERT INTO application.food(FoodID, Name, Quantity, Category, ExpiryDate, StorageLocation, FoodStatus) VALUES (@FoodID, @Name, @Quantity, @Category, @ExpiryDate, @StorageLocation, @FoodStatus)";
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@FoodID", food.FoodID);
+                        command.Parameters.AddWithValue("@Name", food.FoodName);
+                        command.Parameters.AddWithValue("@Quantity", food.Quantity);
+                        command.Parameters.AddWithValue("@Category", food.Category.ToString());
+                        command.Parameters.AddWithValue("@ExpiryDate", food.ExpiryDate);
+                        command.Parameters.AddWithValue("@StorageLocation", food.StorageLocation.ToString());
+                        command.Parameters.AddWithValue("@FoodStatus", food.Status.ToString());
+                        command.ExecuteNonQuery();
+                        return true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There was an error while adding food: " + ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+            return false;
+        }
+
     }
 }
