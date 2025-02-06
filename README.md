@@ -1,25 +1,30 @@
 # **Save and Savor**
 
-## **Introduction**
-**Save and Savor** is a personal food inventory system designed to help users efficiently manage their food supplies while minimizing waste. With features that allow users to add, update, and remove food items, the system also sends timely notifications for items nearing expiration, ensuring that food is consumed before it spoils.
+## **Introduction**  
+**Save and Savor** is a personal food inventory system designed to help users efficiently manage their food supplies while minimizing waste. With features that allow users to add, update, and remove food items, the system also sends timely notifications for items nearing expiration, ensuring that food is consumed before it spoils.  
 
-Developed as part of a hackathon competition at **Visayas State University**, Save and Savor aligns with **Sustainable Development Goal 2 (Zero Hunger)** by promoting food sustainability and reducing waste. By providing a clear overview of available food items, the system empowers users to make informed decisions, ultimately contributing to a more sustainable and waste-free lifestyle.
+Beyond inventory management, **Save and Savor** provides valuable tips on **healthy living on a budget** and **maintaining a nutritious lifestyle**. By offering guidance on meal planning, budget-friendly shopping, and proper food storage, the system empowers users to make smart, sustainable choices while maximizing their food resources.  
+
+Developed as part of a hackathon competition at **Visayas State University**, Save and Savor aligns with **Sustainable Development Goal 2 (Zero Hunger)** by promoting food sustainability and reducing waste. By providing a clear overview of available food items and practical tips for healthy living, the system contributes to a more sustainable, health-conscious, and waste-free lifestyle.  
+
+---
 
 ## **📑 Table of Contents**  
 
 - [Features](#features)  
-  - [Inventory Management](#-inventory-management)  
-  - [Expiration Tracking](#-expiration-tracking)  
-  - [Comprehensive Overview](#-comprehensive-overview)  
-  - [Export Inventory as PDF](#-export-inventory-as-pdf)  
-  - [User-Friendly Interface](#-user-friendly-interface)  
-  - [Food Waste Reduction](#-food-waste-reduction)  
-- [Usage](#-usage)   
-- [Technologies Used](#-technologies-used)  
-- [Developer Credits](#-developer-credits)  
-- [Contributing](#-contributing)
-- [Acknowledgement](#-acknowledgement)
-- [Contact](#-contact)  
+  - [📦 Inventory Management](#-inventory-management)  
+  - [⏳ Expiration Tracking](#-expiration-tracking)  
+  - [📊 Comprehensive Overview](#-comprehensive-overview)  
+  - [📄 Export Inventory as PDF](#-export-inventory-as-pdf)  
+  - [🖥️ User-Friendly Interface](#-user-friendly-interface)  
+  - [♻️ Food Waste Reduction](#-food-waste-reduction)  
+  - [🍏 Healthy Living & Budget-Friendly Tips](#-healthy-living--budget-friendly-tips)  
+- [Usage](#usage)  
+- [Technologies Used](#technologies-used)  
+- [Developer Credits](#developer-credits)  
+- [Contributing](#contributing)  
+- [Acknowledgement](#acknowledgement)  
+- [Contact](#contact)  
 
 ---
 
@@ -35,7 +40,7 @@ To prevent food spoilage, the system automatically tracks expiration dates and c
 A well-structured overview of the inventory provides users with clear insights into their food stock. Items are categorized by **food type** and **storage location**, including refrigerators, freezers, pantries, and other designated areas, facilitating easy access and efficient inventory management.  
 
 ### **📄 Export Inventory as PDF**  
-Users can export their inventory data as a PDF file, allowing for easy record-keeping, sharing, or printing. This feature ensures flexibility in managing and reviewing food stock outside the application, with a clean and professional format suitable for documentation. 
+Users can export their inventory data as a PDF file, allowing for easy record-keeping, sharing, or printing. This feature ensures flexibility in managing and reviewing food stock outside the application, with a clean and professional format suitable for documentation.  
 
 ### **🖥️ User-Friendly Interface**  
 Designed for ease of use, the system features an intuitive and user-friendly interface. Whether adding new food items, updating existing ones, or monitoring expiration statuses, users can navigate the system effortlessly. The logical data structure ensures a seamless and efficient user experience.  
@@ -43,6 +48,10 @@ Designed for ease of use, the system features an intuitive and user-friendly int
 ### **♻️ Food Waste Reduction**  
 By actively tracking expiration dates and providing automated alerts, the system promotes responsible food consumption. This feature encourages users to utilize perishable items before expiration, leading to better meal planning, financial savings, and a more sustainable lifestyle.  
 
+### **🍏 Healthy Living & Budget-Friendly Tips**  
+Save and Savor includes a dedicated section with **practical tips on maintaining a healthy lifestyle while staying on budget**. Users can access expert advice on **nutritious meal planning, cost-effective grocery shopping, and reducing food waste**, helping them make the most of their food while prioritizing health and affordability.  
+
+---
 ## 📌 **Usage**  
 
 Follow these steps to effectively manage your food inventory and reduce waste:  
