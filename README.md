@@ -7,11 +7,13 @@ Beyond inventory management, **Save and Savor** provides valuable tips on **heal
 
 Developed as part of a hackathon competition at **Visayas State University**, Save and Savor aligns with **Sustainable Development Goal 2 (Zero Hunger)** by promoting food sustainability and reducing waste. By providing a clear overview of available food items and practical tips for healthy living, the system contributes to a more sustainable, health-conscious, and waste-free lifestyle.  
 
+This application was developed with a time limit of **eight (8) hours** as part of the competition's challenge.  
+
 ---
 
 ## **📑 Table of Contents**  
-
-- [Features](#features)  
+- [📱 Interface Design](#-interface-design)  
+- [🚀 Features](#-features)  
   - [📦 Inventory Management](#-inventory-management)  
   - [⏳ Expiration Tracking](#-expiration-tracking)  
   - [📊 Comprehensive Overview](#-comprehensive-overview)  
@@ -19,16 +21,30 @@ Developed as part of a hackathon competition at **Visayas State University**, Sa
   - [🖥️ User-Friendly Interface](#-user-friendly-interface)  
   - [♻️ Food Waste Reduction](#-food-waste-reduction)  
   - [🍏 Healthy Living & Budget-Friendly Tips](#-healthy-living--budget-friendly-tips)  
-- [Usage](#usage)  
-- [Technologies Used](#technologies-used)  
-- [Developer Credits](#developer-credits)  
-- [Contributing](#contributing)  
-- [Acknowledgement](#acknowledgement)  
-- [Contact](#contact)  
+- [📌 Usage](#-usage)  
+- [🛠 Technologies Used](#-technologies-used)  
+- [👨‍💻 Developer Credits](#-developer-credits)  
+- [🤝 Contributing](#-contributing)  
+- [🙏 Acknowledgement](#-acknowledgement)  
+- [📩 Contact](#-contact)  
 
 ---
 
-## **Features**  
+## **📱 Interface Design**  
+### **🔐 Log-in Page**  
+![Screenshot](https://github.com/user-attachments/assets/8c77a350-c324-4d72-af73-8f000352144b)  
+
+### **📊 Dashboard Page**  
+![Screenshot](https://github.com/user-attachments/assets/ff209a5f-3006-4d6f-bf6b-5cc9241f198b)  
+
+### **📦 Inventory Page**  
+![Screenshot](https://github.com/user-attachments/assets/9e0b9c13-26d0-4447-93d2-7297cb02f691)  
+
+### **📋 Tips Page**  
+![Screenshot](https://github.com/user-attachments/assets/1bf101b7-53fb-4273-8139-b51a41f6ae34)  
+
+---
+## **🚀 Features**  
 
 ### **📦 Inventory Management**  
 The system offers a structured and efficient approach to managing food inventory. Users can seamlessly add, update, and delete food items while maintaining accurate records of quantity, storage location, and expiration dates. This ensures an organized and accessible inventory.  
@@ -52,7 +68,7 @@ By actively tracking expiration dates and providing automated alerts, the system
 Save and Savor includes a dedicated section with **practical tips on maintaining a healthy lifestyle while staying on budget**. Users can access expert advice on **nutritious meal planning, cost-effective grocery shopping, and reducing food waste**, helping them make the most of their food while prioritizing health and affordability.  
 
 ---
-## 📌 **Usage**  
+## **📌 Usage**  
 
 Follow these steps to effectively manage your food inventory and reduce waste:  
 
@@ -83,23 +99,23 @@ The system automatically tracks expiration dates and sends **reminders** when it
    - **Plan meals accordingly** to make the best use of perishable food.  
    - **Dispose of expired items safely** to maintain food safety.  
 
-## 🚀 **Technologies Used**  
+---
+## **🛠 Technologies Used**  
 
-- **🖥️ C#** – Used for backend development, handling business logic, data processing, and system functionalities.  
-- **🎨 Guna UI** – A powerful UI framework that enhances the visual appeal and user experience with modern and responsive interface components.  
-- **🗄️ MySQL** – A robust relational database management system (RDBMS) used for storing, managing, and retrieving food inventory data efficiently.  
-- **🔄 GitHub** – Enables version control, code collaboration, and project management, ensuring seamless teamwork and continuous development.  
+- **🖥️ C#** – Backend development  
+- **🎨 Guna UI** – UI framework  
+- **🗄️ MySQL** – Database management  
+- **🔄 GitHub** – Version control  
 
-## 👨‍💻 **Developer Credits**  
+---
+## **👨‍💻 Developer Credits**  
+- **John Rhuel C. Laurente** | *Lead Developer and Team Lead*  
+- **Jamir Oasis M. Andrade**  | *Backend Developer*  
+- **Yñigo Niño C. Ramas**  | *Backend Developer*  
+- **Norman John N. Bandibas**  | *Asst. Developer*  
 
-### 👥 **Developers**  
-- **John Rhuel C. Laurente**  
-- **Jamir Oasis M. Andrade**  
-- **Yñigo Niño C. Ramas**  
-- **Norman John N. Bandibas**  
-
-## 🤝 **Contributing**
-
+---
+## **🤝 Contributing**  
 Thank you for considering contributing to this project! Your support and contributions are greatly valued. Here are some ways you can contribute:  
 
 1. **🐞 Report Bugs** – If you encounter any bugs or issues, please open an issue on GitHub to help improve the system.  
@@ -108,14 +124,14 @@ Thank you for considering contributing to this project! Your support and contrib
 4. **💬 Provide Feedback** – Share your insights, feedback, and ideas in the project's issues section to help refine the system.  
 5. **📢 Spread the Word** – Help others discover this project by sharing it on social media or with your peers.  
 
-We appreciate your interest and support! 🚀 Feel free to contribute by submitting a pull request or reporting issues.  
-
-## 🙏 **Acknowledgement**
+---
+## **🙏 Acknowledgement**  
 We extend our heartfelt gratitude to the following individuals and organizations for their invaluable support in the development of **Save and Savor**:
 - **Computer Science Student Society** – For providing the platform and opportunity to participate in the hackathon.
 - **Mentors & Judges** – For their guidance, constructive feedback, and encouragement throughout the development process.
-- **Friends** – For their unwavering support and inspiration.
 - **Open-Source Community** – For providing resources, tools, and frameworks that made this project possible.
 
-## 📩 **Contact**
+---
+## **📩 Contact**  
 📧 **saveandsavor.contact@gmail.com**
+
