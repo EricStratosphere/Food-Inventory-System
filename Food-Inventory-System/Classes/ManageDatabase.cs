@@ -140,6 +140,22 @@ namespace Food_Inventory_System.Classes
             }
         }
 
+        public void UpdateFoodStatus(string FoodID, Status status)
+        {
+            using (MySqlConnection conn = new MySqlConnection(con))
+            {
+                conn.Open();
+                string query = "UPDATE application.food SET FoodStatus = @Status WHERE FoodID = @FoodID";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Status", status.ToString());
+                    cmd.Parameters.AddWithValue("@FoodID", FoodID);
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                   
+                }
+            }
+        }
+
         public void DeleteFoodItem(string FoodId)
         {
             using (MySqlConnection conn = new MySqlConnection(con))

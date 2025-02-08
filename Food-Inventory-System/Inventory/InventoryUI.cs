@@ -99,6 +99,53 @@ namespace Food_Inventory_System.Inventory
             foodTableView.Columns["StorageLocation"].DisplayIndex = 4;
             foodTableView.Columns["Status"].DisplayIndex = 5;
 
+            UpdateFoodStatus();
+
+            // Update Status color
+            foreach (DataGridViewRow row in foodTableView.Rows)
+            {
+                if (row.Cells["Status"].Value.ToString() == "Expired")
+                {
+                    row.Cells["Status"].Style.BackColor = Color.Red;
+                    row.Cells["Status"].Style.ForeColor = Color.White;
+                }
+                else if (row.Cells["Status"].Value.ToString() == "ExpiringSoon")
+                {
+                    row.Cells["Status"].Style.BackColor = Color.Orange;
+                    row.Cells["Status"].Style.ForeColor = Color.White;
+                }
+                else
+                {
+                    row.Cells["Status"].Style.BackColor = Color.Green;
+                    row.Cells["Status"].Style.ForeColor = Color.White;
+                }
+            }
+
+
+        }
+
+        private void UpdateFoodStatus()
+        {
+            DateTime dateTime = DateTime.Now;
+           
+
+            foreach (Food f in foods)
+            {
+                TimeSpan difference = f.ExpiryDate - dateTime;
+                if (difference.TotalDays < 0)
+                {
+                    db.UpdateFoodStatus(f.FoodID, Status.Expired);
+                }
+                else if (difference.TotalDays < 30)
+                {
+                    db.UpdateFoodStatus(f.FoodID, Status.ExpiringSoon);
+                }
+                else
+                {
+                    db.UpdateFoodStatus(f.FoodID, Status.Fresh);
+                }
+
+            }
         }
 
         private void foodTableView_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)

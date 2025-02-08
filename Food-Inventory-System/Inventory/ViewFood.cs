@@ -30,7 +30,21 @@ namespace Food_Inventory_System.Inventory
             expiryVal.Text = food.ExpiryDate.ToString();
             storageLocVal.Text = food.StorageLocation.ToString();
             foodStatusVal.Text = food.Status.ToString();
-
+            if(foodStatusVal.Text == "Fresh")
+            {
+                foodStatusVal.ForeColor = Color.Green;
+                colorIndic.FillColor = Color.Green;
+            }
+            else if (foodStatusVal.Text == "Expired")
+            {
+                foodStatusVal.ForeColor = Color.Red;
+                colorIndic.FillColor = Color.Red;
+            }
+            else
+            {
+                foodStatusVal.ForeColor = Color.Orange;
+                colorIndic.FillColor = Color.Orange;
+            }
 
         }
     }

@@ -81,5 +81,31 @@ namespace Food_Inventory_System.Inventory
                 this.Dispose();
             }
         }
+        private readonly Dictionary<Category, StorageLocation> defaultStorage = new Dictionary<Category, StorageLocation>
+        {
+            { Category.Dairy, StorageLocation.Fridge },
+            { Category.Fruits, StorageLocation.Countertop },
+            { Category.Vegetables, StorageLocation.Fridge },
+            { Category.MeatAndPoultry, StorageLocation.Freezer },
+            { Category.Seafood, StorageLocation.Freezer },
+            { Category.GrainsAndBread, StorageLocation.Pantry },
+            { Category.FrozenFoods, StorageLocation.Freezer },
+            { Category.CannedAndJarred, StorageLocation.Cabinet },
+            { Category.Snacks, StorageLocation.SnackDrawer },
+            { Category.Beverages, StorageLocation.WineRack }
+        };
+        private StorageLocation GetDefaultStorageLocation(Category category)
+        {
+            return defaultStorage.TryGetValue(category, out var location) ? location : StorageLocation.Pantry;
+        }
+
+        private void categoryVal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+                
+                StorageLocation defaultLocation = GetDefaultStorageLocation((Category)Enum.Parse(typeof(Category), categoryVal.SelectedItem.ToString()));
+
+               storageLocVal.Text = defaultLocation.ToString();
+            
+        }
     }
 }

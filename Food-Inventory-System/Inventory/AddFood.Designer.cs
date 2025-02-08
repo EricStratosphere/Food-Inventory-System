@@ -195,6 +195,7 @@
             this.categoryVal.Size = new System.Drawing.Size(334, 36);
             this.categoryVal.TabIndex = 31;
             this.categoryVal.TextOffset = new System.Drawing.Point(10, 0);
+            this.categoryVal.SelectedIndexChanged += new System.EventHandler(this.categoryVal_SelectedIndexChanged);
             // 
             // storageLocVal
             // 

@@ -106,17 +106,17 @@
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.FillColor = System.Drawing.Color.SteelBlue;
             this.guna2Panel1.ForeColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(819, 26);
+            this.guna2Panel1.Location = new System.Drawing.Point(784, 26);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(470, 383);
+            this.guna2Panel1.Size = new System.Drawing.Size(505, 383);
             this.guna2Panel1.TabIndex = 0;
             // 
             // label34
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(44, 313);
+            this.label34.Location = new System.Drawing.Point(74, 313);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(267, 25);
             this.label34.TabIndex = 9;
@@ -126,7 +126,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(43, 280);
+            this.label32.Location = new System.Drawing.Point(73, 280);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(237, 25);
             this.label32.TabIndex = 8;
@@ -156,7 +156,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(44, 248);
+            this.label5.Location = new System.Drawing.Point(74, 248);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(267, 25);
             this.label5.TabIndex = 5;
@@ -166,7 +166,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(44, 215);
+            this.label4.Location = new System.Drawing.Point(74, 215);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(375, 25);
             this.label4.TabIndex = 4;
@@ -176,7 +176,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 182);
+            this.label3.Location = new System.Drawing.Point(74, 182);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(262, 25);
             this.label3.TabIndex = 3;
@@ -187,7 +187,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(44, 150);
+            this.label2.Location = new System.Drawing.Point(74, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(285, 25);
             this.label2.TabIndex = 2;
@@ -468,10 +468,10 @@
             this.guna2Panel3.Controls.Add(this.label33);
             this.guna2Panel3.FillColor = System.Drawing.Color.Crimson;
             this.guna2Panel3.ForeColor = System.Drawing.Color.White;
-            this.guna2Panel3.Location = new System.Drawing.Point(29, 436);
+            this.guna2Panel3.Location = new System.Drawing.Point(29, 415);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(1260, 349);
+            this.guna2Panel3.Size = new System.Drawing.Size(1260, 370);
             this.guna2Panel3.TabIndex = 20;
             // 
             // guna2PictureBox8
@@ -582,7 +582,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(217, 73);
+            this.label28.Location = new System.Drawing.Point(232, 73);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(183, 25);
             this.label28.TabIndex = 7;
@@ -592,7 +592,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(215, 48);
+            this.label29.Location = new System.Drawing.Point(230, 48);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(100, 25);
             this.label29.TabIndex = 6;
@@ -616,7 +616,7 @@
             this.label33.BackColor = System.Drawing.Color.Transparent;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(145, 30);
+            this.label33.Location = new System.Drawing.Point(160, 30);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(84, 91);
             this.label33.TabIndex = 0;
@@ -626,11 +626,10 @@
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(522, 800);
+            this.label35.Location = new System.Drawing.Point(522, 795);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(274, 25);
+            this.label35.Size = new System.Drawing.Size(0, 25);
             this.label35.TabIndex = 21;
-            this.label35.Text = "Rhuel | Ynigo | Jamir | Norman";
             // 
             // TipsUI
             // 

@@ -45,6 +45,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.colorIndic = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -209,12 +210,23 @@
             this.pictureBox1.TabIndex = 39;
             this.pictureBox1.TabStop = false;
             // 
+            // colorIndic
+            // 
+            this.colorIndic.BorderRadius = 5;
+            this.colorIndic.FillColor = System.Drawing.Color.DarkOrange;
+            this.colorIndic.Location = new System.Drawing.Point(213, 276);
+            this.colorIndic.Name = "colorIndic";
+            this.colorIndic.ShadowDecoration.Parent = this.colorIndic;
+            this.colorIndic.Size = new System.Drawing.Size(22, 19);
+            this.colorIndic.TabIndex = 40;
+            // 
             // ViewFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(536, 363);
+            this.Controls.Add(this.colorIndic);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.panel1);
@@ -258,5 +270,6 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Panel colorIndic;
     }
 }
