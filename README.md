@@ -107,12 +107,24 @@ The system automatically tracks expiration dates and sends **reminders** when it
 - **🗄️ MySQL** – Database management  
 - **🔄 GitHub** – Version control  
 
+<<<<<<< HEAD
+## 👨‍💻 **Developer Credits**  
+
+### 👥 **Developers**  
+- [**John Rhuel C. Laurente**](https://github.com/VSUrhuel)  
+- [**Jamir Oasis M. Andrade**](https://github.com/jamir4270)  
+- [**Yñigo Niño C. Ramas**](https://github.com/EricStratosphere)  
+- [**Norman John N. Bandibas**](https://github.com/eNJay143)  
+
+## 🤝 **Contributing**
+=======
 ---
 ## **👨‍💻 Developer Credits**  
 - **John Rhuel C. Laurente** | *Lead Developer and Team Lead*  
 - **Jamir Oasis M. Andrade**  | *Backend Developer*  
 - **Yñigo Niño C. Ramas**  | *Backend Developer*  
 - **Norman John N. Bandibas**  | *Asst. Developer*  
+>>>>>>> 4b9edd9b558a3693ed7c47c5ab0d8d9214984868
 
 ---
 ## **🤝 Contributing**  
